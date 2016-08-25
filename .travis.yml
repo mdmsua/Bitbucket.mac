@@ -1,0 +1,5 @@
+language: objective-c
+osx_image: xcode8
+xcode_project: BitbucketInbox/BitbucketInbox.xcodeproj
+xcode_scheme: BitbucketInboxTests
+xcode_sdk: macosx10.11
