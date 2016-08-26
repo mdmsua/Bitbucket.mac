@@ -29,7 +29,7 @@
 		146BC45D1D6F797F0031C307 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		146BC4601D6F797F0031C307 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		146BC4621D6F797F0031C307 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		146BC4671D6F797F0031C307 /* BitbucketInboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitbucketInboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		146BC4671D6F797F0031C307 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		146BC46B1D6F797F0031C307 /* BitbucketInboxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitbucketInboxTests.swift; sourceTree = "<group>"; };
 		146BC46D1D6F797F0031C307 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,7 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				146BC4581D6F797F0031C307 /* Bitbucket Inbox.app */,
-				146BC4671D6F797F0031C307 /* BitbucketInboxTests.xctest */,
+				146BC4671D6F797F0031C307 /* Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,9 +93,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		146BC4571D6F797F0031C307 /* BitbucketInbox */ = {
+		146BC4571D6F797F0031C307 /* Application */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 146BC4701D6F797F0031C307 /* Build configuration list for PBXNativeTarget "BitbucketInbox" */;
+			buildConfigurationList = 146BC4701D6F797F0031C307 /* Build configuration list for PBXNativeTarget "Application" */;
 			buildPhases = (
 				146BC4541D6F797F0031C307 /* Sources */,
 				146BC4551D6F797F0031C307 /* Frameworks */,
@@ -105,14 +105,14 @@
 			);
 			dependencies = (
 			);
-			name = BitbucketInbox;
+			name = Application;
 			productName = BitbucketInbox;
 			productReference = 146BC4581D6F797F0031C307 /* Bitbucket Inbox.app */;
 			productType = "com.apple.product-type.application";
 		};
-		146BC4661D6F797F0031C307 /* BitbucketInboxTests */ = {
+		146BC4661D6F797F0031C307 /* Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 146BC4731D6F797F0031C307 /* Build configuration list for PBXNativeTarget "BitbucketInboxTests" */;
+			buildConfigurationList = 146BC4731D6F797F0031C307 /* Build configuration list for PBXNativeTarget "Tests" */;
 			buildPhases = (
 				146BC4631D6F797F0031C307 /* Sources */,
 				146BC4641D6F797F0031C307 /* Frameworks */,
@@ -123,9 +123,9 @@
 			dependencies = (
 				146BC4691D6F797F0031C307 /* PBXTargetDependency */,
 			);
-			name = BitbucketInboxTests;
+			name = Tests;
 			productName = BitbucketInboxTests;
-			productReference = 146BC4671D6F797F0031C307 /* BitbucketInboxTests.xctest */;
+			productReference = 146BC4671D6F797F0031C307 /* Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -162,8 +162,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				146BC4571D6F797F0031C307 /* BitbucketInbox */,
-				146BC4661D6F797F0031C307 /* BitbucketInboxTests */,
+				146BC4571D6F797F0031C307 /* Application */,
+				146BC4661D6F797F0031C307 /* Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -209,7 +209,7 @@
 /* Begin PBXTargetDependency section */
 		146BC4691D6F797F0031C307 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 146BC4571D6F797F0031C307 /* BitbucketInbox */;
+			target = 146BC4571D6F797F0031C307 /* Application */;
 			targetProxy = 146BC4681D6F797F0031C307 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -352,6 +352,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				APP_BUNDLE = "$(APP_NAME).app";
+				APP_NAME = "Bitbucket\\ Inbox";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 56468X2PU5;
@@ -360,7 +362,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mdmsua.BitbucketInboxTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BitbucketInbox.app/Contents/MacOS/BitbucketInbox";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bitbucket Inbox.app/Contents/MacOS/Bitbucket Inbox";
 			};
 			name = Debug;
 		};
@@ -368,6 +370,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				APP_BUNDLE = "$(APP_NAME).app";
+				APP_NAME = "Bitbucket\\ Inbox";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 56468X2PU5;
@@ -376,7 +380,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mdmsua.BitbucketInboxTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BitbucketInbox.app/Contents/MacOS/BitbucketInbox";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bitbucket Inbox.app/Contents/MacOS/Bitbucket Inbox";
 			};
 			name = Release;
 		};
@@ -392,7 +396,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		146BC4701D6F797F0031C307 /* Build configuration list for PBXNativeTarget "BitbucketInbox" */ = {
+		146BC4701D6F797F0031C307 /* Build configuration list for PBXNativeTarget "Application" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				146BC4711D6F797F0031C307 /* Debug */,
@@ -401,7 +405,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		146BC4731D6F797F0031C307 /* Build configuration list for PBXNativeTarget "BitbucketInboxTests" */ = {
+		146BC4731D6F797F0031C307 /* Build configuration list for PBXNativeTarget "Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				146BC4741D6F797F0031C307 /* Debug */,
