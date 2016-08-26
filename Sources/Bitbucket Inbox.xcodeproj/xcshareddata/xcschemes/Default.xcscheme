@@ -17,7 +17,7 @@
                BlueprintIdentifier = "146BC4571D6F797F0031C307"
                BuildableName = "Bitbucket Inbox.app"
                BlueprintName = "Application"
-               ReferencedContainer = "container:BitbucketInbox.xcodeproj">
+               ReferencedContainer = "container:Bitbucket Inbox.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "146BC4661D6F797F0031C307"
                BuildableName = "Tests.xctest"
                BlueprintName = "Tests"
-               ReferencedContainer = "container:BitbucketInbox.xcodeproj">
+               ReferencedContainer = "container:Bitbucket Inbox.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -45,7 +45,7 @@
             BlueprintIdentifier = "146BC4571D6F797F0031C307"
             BuildableName = "Bitbucket Inbox.app"
             BlueprintName = "Application"
-            ReferencedContainer = "container:BitbucketInbox.xcodeproj">
+            ReferencedContainer = "container:Bitbucket Inbox.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -68,7 +68,7 @@
             BlueprintIdentifier = "146BC4571D6F797F0031C307"
             BuildableName = "Bitbucket Inbox.app"
             BlueprintName = "Application"
-            ReferencedContainer = "container:BitbucketInbox.xcodeproj">
+            ReferencedContainer = "container:Bitbucket Inbox.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -87,7 +87,7 @@
             BlueprintIdentifier = "146BC4571D6F797F0031C307"
             BuildableName = "Bitbucket Inbox.app"
             BlueprintName = "Application"
-            ReferencedContainer = "container:BitbucketInbox.xcodeproj">
+            ReferencedContainer = "container:Bitbucket Inbox.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
