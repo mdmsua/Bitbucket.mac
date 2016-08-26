@@ -24,7 +24,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		146BC4581D6F797F0031C307 /* BitbucketInbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitbucketInbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		146BC4581D6F797F0031C307 /* Bitbucket Inbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bitbucket Inbox.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		146BC45B1D6F797F0031C307 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		146BC45D1D6F797F0031C307 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		146BC4601D6F797F0031C307 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -64,7 +64,7 @@
 		146BC4591D6F797F0031C307 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				146BC4581D6F797F0031C307 /* BitbucketInbox.app */,
+				146BC4581D6F797F0031C307 /* Bitbucket Inbox.app */,
 				146BC4671D6F797F0031C307 /* BitbucketInboxTests.xctest */,
 			);
 			name = Products;
@@ -107,7 +107,7 @@
 			);
 			name = BitbucketInbox;
 			productName = BitbucketInbox;
-			productReference = 146BC4581D6F797F0031C307 /* BitbucketInbox.app */;
+			productReference = 146BC4581D6F797F0031C307 /* Bitbucket Inbox.app */;
 			productType = "com.apple.product-type.application";
 		};
 		146BC4661D6F797F0031C307 /* BitbucketInboxTests */ = {
@@ -269,6 +269,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "Bitbucket Inbox";
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -311,6 +312,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "Bitbucket Inbox";
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
@@ -326,7 +328,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mdmsua.BitbucketInbox;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Bitbucket Inbox";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -341,7 +343,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mdmsua.BitbucketInbox;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Bitbucket Inbox";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -397,6 +399,7 @@
 				146BC4721D6F797F0031C307 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		146BC4731D6F797F0031C307 /* Build configuration list for PBXNativeTarget "BitbucketInboxTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +408,7 @@
 				146BC4751D6F797F0031C307 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
