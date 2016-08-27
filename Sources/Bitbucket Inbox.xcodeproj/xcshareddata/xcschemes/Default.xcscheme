@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "146BC4571D6F797F0031C307"
-               BuildableName = "BitbucketInbox.app"
-               BlueprintName = "BitbucketInbox"
-               ReferencedContainer = "container:BitbucketInbox.xcodeproj">
+               BuildableName = "Bitbucket Inbox.app"
+               BlueprintName = "Application"
+               ReferencedContainer = "container:Bitbucket Inbox.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "146BC4661D6F797F0031C307"
-               BuildableName = "BitbucketInboxTests.xctest"
-               BlueprintName = "BitbucketInboxTests"
-               ReferencedContainer = "container:BitbucketInbox.xcodeproj">
+               BuildableName = "Tests.xctest"
+               BlueprintName = "Tests"
+               ReferencedContainer = "container:Bitbucket Inbox.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "146BC4571D6F797F0031C307"
-            BuildableName = "BitbucketInbox.app"
-            BlueprintName = "BitbucketInbox"
-            ReferencedContainer = "container:BitbucketInbox.xcodeproj">
+            BuildableName = "Bitbucket Inbox.app"
+            BlueprintName = "Application"
+            ReferencedContainer = "container:Bitbucket Inbox.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "146BC4571D6F797F0031C307"
-            BuildableName = "BitbucketInbox.app"
-            BlueprintName = "BitbucketInbox"
-            ReferencedContainer = "container:BitbucketInbox.xcodeproj">
+            BuildableName = "Bitbucket Inbox.app"
+            BlueprintName = "Application"
+            ReferencedContainer = "container:Bitbucket Inbox.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -85,9 +85,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "146BC4571D6F797F0031C307"
-            BuildableName = "BitbucketInbox.app"
-            BlueprintName = "BitbucketInbox"
-            ReferencedContainer = "container:BitbucketInbox.xcodeproj">
+            BuildableName = "Bitbucket Inbox.app"
+            BlueprintName = "Application"
+            ReferencedContainer = "container:Bitbucket Inbox.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import BitbucketInbox
 
 class BitbucketInboxTests: XCTestCase {
     
