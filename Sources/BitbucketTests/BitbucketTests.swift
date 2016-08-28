@@ -1,14 +1,15 @@
 //
-//  BitbucketInboxTests.swift
-//  BitbucketInboxTests
+//  BitbucketTests.swift
+//  BitbucketTests
 //
-//  Created by Dmytro Morozov on 25/08/2016.
+//  Created by Dmytro Morozov on 28/08/2016.
 //  Copyright © 2016 Dmytro Morozov. All rights reserved.
 //
 
 import XCTest
+@testable import Bitbucket
 
-class BitbucketInboxTests: XCTestCase {
+class BitbucketTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -27,7 +28,7 @@ class BitbucketInboxTests: XCTestCase {
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measure {
+        self.measureBlock {
             // Put the code you want to measure the time of here.
         }
     }

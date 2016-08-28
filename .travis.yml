@@ -1,4 +1,4 @@
 language: objective-c
-osx_image: xcode8
-xcode_sdk: macosx10.12
-script: xcodebuild -project Sources/Bitbucket\ Inbox.xcodeproj -scheme Default clean build test
+osx_image: xcode7.3
+podfile: Sources/Podfile
+script: xcodebuild -workspace Sources/Bitbucket.xcworkspace -scheme Bitbucket clean build test

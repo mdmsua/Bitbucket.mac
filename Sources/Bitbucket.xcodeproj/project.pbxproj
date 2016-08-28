@@ -1,0 +1,552 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 47;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14D616651D73792600801053 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D616641D73792600801053 /* AppDelegate.swift */; };
+		14D616671D73792600801053 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14D616661D73792600801053 /* Assets.xcassets */; };
+		14D6166A1D73792600801053 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14D616681D73792600801053 /* MainMenu.xib */; };
+		14D616751D73792600801053 /* BitbucketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D616741D73792600801053 /* BitbucketTests.swift */; };
+		14D616801D737E6C00801053 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D6167F1D737E6C00801053 /* PopoverViewController.swift */; };
+		2934924FC9126843E7353C5B /* Pods_Bitbucket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED50936BCE87E1CE7D5AF63 /* Pods_Bitbucket.framework */; };
+		69ACA57134B9DB23E9B49A32 /* Pods_BitbucketTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF56EAFFBF60C626E510836 /* Pods_BitbucketTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		14D616711D73792600801053 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14D616591D73792600801053 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14D616601D73792600801053;
+			remoteInfo = Bitbucket;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		14D616611D73792600801053 /* Bitbucket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bitbucket.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14D616641D73792600801053 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		14D616661D73792600801053 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		14D616691D73792600801053 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		14D6166B1D73792600801053 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14D616701D73792600801053 /* BitbucketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitbucketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14D616741D73792600801053 /* BitbucketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitbucketTests.swift; sourceTree = "<group>"; };
+		14D616761D73792600801053 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14D6167F1D737E6C00801053 /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
+		14D616811D73862000801053 /* Bitbucket.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Bitbucket.entitlements; sourceTree = "<group>"; };
+		6DF56EAFFBF60C626E510836 /* Pods_BitbucketTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitbucketTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7878224CC32322F0ECA1FD18 /* Pods-BitbucketTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitbucketTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitbucketTests/Pods-BitbucketTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A6A47F7819B328ED3263E8D4 /* Pods-Bitbucket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitbucket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bitbucket/Pods-Bitbucket.debug.xcconfig"; sourceTree = "<group>"; };
+		AB331DFCC3B9C15FBDFEE99E /* Pods-Bitbucket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitbucket.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bitbucket/Pods-Bitbucket.release.xcconfig"; sourceTree = "<group>"; };
+		BED50936BCE87E1CE7D5AF63 /* Pods_Bitbucket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bitbucket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D97531244A398983E5581470 /* Pods-BitbucketTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitbucketTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitbucketTests/Pods-BitbucketTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		14D6165E1D73792600801053 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2934924FC9126843E7353C5B /* Pods_Bitbucket.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14D6166D1D73792600801053 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69ACA57134B9DB23E9B49A32 /* Pods_BitbucketTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14D616581D73792600801053 = {
+			isa = PBXGroup;
+			children = (
+				14D616631D73792600801053 /* Bitbucket */,
+				14D616731D73792600801053 /* BitbucketTests */,
+				14D616621D73792600801053 /* Products */,
+				6989B632E2618AE3844E3776 /* Pods */,
+				B2D4928FB07DAFF937948F00 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		14D616621D73792600801053 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14D616611D73792600801053 /* Bitbucket.app */,
+				14D616701D73792600801053 /* BitbucketTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14D616631D73792600801053 /* Bitbucket */ = {
+			isa = PBXGroup;
+			children = (
+				14D616811D73862000801053 /* Bitbucket.entitlements */,
+				14D616641D73792600801053 /* AppDelegate.swift */,
+				14D616661D73792600801053 /* Assets.xcassets */,
+				14D616681D73792600801053 /* MainMenu.xib */,
+				14D6166B1D73792600801053 /* Info.plist */,
+				14D6167F1D737E6C00801053 /* PopoverViewController.swift */,
+			);
+			path = Bitbucket;
+			sourceTree = "<group>";
+		};
+		14D616731D73792600801053 /* BitbucketTests */ = {
+			isa = PBXGroup;
+			children = (
+				14D616741D73792600801053 /* BitbucketTests.swift */,
+				14D616761D73792600801053 /* Info.plist */,
+			);
+			path = BitbucketTests;
+			sourceTree = "<group>";
+		};
+		6989B632E2618AE3844E3776 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A6A47F7819B328ED3263E8D4 /* Pods-Bitbucket.debug.xcconfig */,
+				AB331DFCC3B9C15FBDFEE99E /* Pods-Bitbucket.release.xcconfig */,
+				7878224CC32322F0ECA1FD18 /* Pods-BitbucketTests.debug.xcconfig */,
+				D97531244A398983E5581470 /* Pods-BitbucketTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B2D4928FB07DAFF937948F00 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BED50936BCE87E1CE7D5AF63 /* Pods_Bitbucket.framework */,
+				6DF56EAFFBF60C626E510836 /* Pods_BitbucketTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		14D616601D73792600801053 /* Bitbucket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14D616791D73792600801053 /* Build configuration list for PBXNativeTarget "Bitbucket" */;
+			buildPhases = (
+				B11E3D7D603F38B58C78B593 /* 📦 Check Pods Manifest.lock */,
+				14D6165D1D73792600801053 /* Sources */,
+				14D6165E1D73792600801053 /* Frameworks */,
+				14D6165F1D73792600801053 /* Resources */,
+				DB469F0E8EAE4B99A7B3E1EF /* 📦 Embed Pods Frameworks */,
+				318A970F57BE40FB7977AC02 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bitbucket;
+			productName = Bitbucket;
+			productReference = 14D616611D73792600801053 /* Bitbucket.app */;
+			productType = "com.apple.product-type.application";
+		};
+		14D6166F1D73792600801053 /* BitbucketTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14D6167C1D73792600801053 /* Build configuration list for PBXNativeTarget "BitbucketTests" */;
+			buildPhases = (
+				E9FA72B164C07EA5A7079BEE /* 📦 Check Pods Manifest.lock */,
+				14D6166C1D73792600801053 /* Sources */,
+				14D6166D1D73792600801053 /* Frameworks */,
+				14D6166E1D73792600801053 /* Resources */,
+				35C82B3E39D3F1F6B37949F2 /* 📦 Embed Pods Frameworks */,
+				EC3A681B8F3EF50C17A4DA29 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14D616721D73792600801053 /* PBXTargetDependency */,
+			);
+			name = BitbucketTests;
+			productName = BitbucketTests;
+			productReference = 14D616701D73792600801053 /* BitbucketTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		14D616591D73792600801053 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Dmytro Morozov";
+				TargetAttributes = {
+					14D616601D73792600801053 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 56468X2PU5;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+					14D6166F1D73792600801053 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 14D616601D73792600801053;
+					};
+				};
+			};
+			buildConfigurationList = 14D6165C1D73792600801053 /* Build configuration list for PBXProject "Bitbucket" */;
+			compatibilityVersion = "Xcode 6.3";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 14D616581D73792600801053;
+			productRefGroup = 14D616621D73792600801053 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				14D616601D73792600801053 /* Bitbucket */,
+				14D6166F1D73792600801053 /* BitbucketTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		14D6165F1D73792600801053 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14D616671D73792600801053 /* Assets.xcassets in Resources */,
+				14D6166A1D73792600801053 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14D6166E1D73792600801053 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		318A970F57BE40FB7977AC02 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bitbucket/Pods-Bitbucket-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		35C82B3E39D3F1F6B37949F2 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitbucketTests/Pods-BitbucketTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B11E3D7D603F38B58C78B593 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DB469F0E8EAE4B99A7B3E1EF /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bitbucket/Pods-Bitbucket-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9FA72B164C07EA5A7079BEE /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EC3A681B8F3EF50C17A4DA29 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitbucketTests/Pods-BitbucketTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14D6165D1D73792600801053 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14D616801D737E6C00801053 /* PopoverViewController.swift in Sources */,
+				14D616651D73792600801053 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14D6166C1D73792600801053 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14D616751D73792600801053 /* BitbucketTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		14D616721D73792600801053 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14D616601D73792600801053 /* Bitbucket */;
+			targetProxy = 14D616711D73792600801053 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		14D616681D73792600801053 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14D616691D73792600801053 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		14D616771D73792600801053 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		14D616781D73792600801053 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		14D6167A1D73792600801053 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6A47F7819B328ED3263E8D4 /* Pods-Bitbucket.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Bitbucket/Bitbucket.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Bitbucket/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mdmsua.Bitbucket;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		14D6167B1D73792600801053 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB331DFCC3B9C15FBDFEE99E /* Pods-Bitbucket.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Bitbucket/Bitbucket.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_TESTABILITY = YES;
+				INFOPLIST_FILE = Bitbucket/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mdmsua.Bitbucket;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		14D6167D1D73792600801053 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7878224CC32322F0ECA1FD18 /* Pods-BitbucketTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = BitbucketTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mdmsua.BitbucketTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bitbucket.app/Contents/MacOS/Bitbucket";
+			};
+			name = Debug;
+		};
+		14D6167E1D73792600801053 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D97531244A398983E5581470 /* Pods-BitbucketTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = BitbucketTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mdmsua.BitbucketTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bitbucket.app/Contents/MacOS/Bitbucket";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14D6165C1D73792600801053 /* Build configuration list for PBXProject "Bitbucket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14D616771D73792600801053 /* Debug */,
+				14D616781D73792600801053 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14D616791D73792600801053 /* Build configuration list for PBXNativeTarget "Bitbucket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14D6167A1D73792600801053 /* Debug */,
+				14D6167B1D73792600801053 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14D6167C1D73792600801053 /* Build configuration list for PBXNativeTarget "BitbucketTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14D6167D1D73792600801053 /* Debug */,
+				14D6167E1D73792600801053 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 14D616591D73792600801053 /* Project object */;
+}
