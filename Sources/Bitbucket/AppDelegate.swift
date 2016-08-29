@@ -15,6 +15,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     private let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(NSVariableStatusItemLength)
     
+    private var timer: NSTimer?
+    
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         statusItem.button?.image = NSImage(named: "Bitbucket")
         statusItem.button?.image?.template = true
@@ -25,6 +27,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             if let count = notification.object as? Int {
                 self?.statusItem.button?.title = String(count)
             }
+        }
+        NSNotificationCenter.defaultCenter().addObserverForName("interval", object: nil, queue: nil) {
+            [weak self] notification -> Void in
+            if let interval = notification.object as? Double {
+                self?.timer?.invalidate()
+                self?.scheduleInboxCheck(interval)
+            }
+        }
+        if SettingStore.interval > 0 {
+            self.scheduleInboxCheck(SettingStore.interval)
         }
     }
     
@@ -44,6 +56,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     private func closePopover() {
         popover.performClose(self)
+    }
+    
+    private func scheduleInboxCheck(interval: Double) {
+        timer = NSTimer.scheduledTimerWithTimeInterval(60.0 * interval, target: self, selector: #selector(checkInbox), userInfo: nil, repeats: true)
+    }
+    
+    @objc private func checkInbox() {
+        BitbucketClient()?.getInboxPullRequestsCount {
+            [weak self] (count, error) in
+            if let count = count {
+                self?.statusItem.button?.title = String(count)
+            }
+        }
     }
 }
 
