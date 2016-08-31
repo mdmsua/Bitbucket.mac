@@ -1,0 +1,3 @@
+workspace "Sources/Bitbucket.xcworkspace"
+scheme "Bitbucket"
+clean true
