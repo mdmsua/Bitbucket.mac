@@ -16,14 +16,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(NSVariableStatusItemLength)
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        statusItem.button?.image = NSImage(named: "Bitbucket")
+        statusItem.button?.image = NSImage(named: "Black")
         statusItem.button?.image?.template = true
         statusItem.button?.imagePosition = .ImageLeft
         statusItem.button?.action = #selector(togglePopover)
         NSNotificationCenter.defaultCenter().addObserverForName("count", object: nil, queue: nil) {
             [weak self] notification -> Void in
             if let count = notification.object as? Int {
-                self?.statusItem.button?.title = String(count)
+                if count > 0 {
+                    self?.statusItem.button?.title = String(count)
+                    self?.statusItem.button?.image = NSImage(named: "Blue")
+                } else {
+                    self?.statusItem.button?.title = ""
+                    self?.statusItem.button?.image = NSImage(named: "Black")
+                }
             }
         }
     }

@@ -134,12 +134,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14D616791D73792600801053 /* Build configuration list for PBXNativeTarget "Bitbucket" */;
 			buildPhases = (
+				9D8A6EA3AB0C0908672E05C6 /* 📦 Check Pods Manifest.lock */,
 				B11E3D7D603F38B58C78B593 /* [CP] Check Pods Manifest.lock */,
 				14D6165D1D73792600801053 /* Sources */,
 				14D6165E1D73792600801053 /* Frameworks */,
 				14D6165F1D73792600801053 /* Resources */,
 				DB469F0E8EAE4B99A7B3E1EF /* [CP] Embed Pods Frameworks */,
 				318A970F57BE40FB7977AC02 /* [CP] Copy Pods Resources */,
+				5A4D9027038D0A660C7EC8A3 /* 📦 Embed Pods Frameworks */,
+				303AFCF92F66E19AA5FB8ED4 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -154,12 +157,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14D6167C1D73792600801053 /* Build configuration list for PBXNativeTarget "BitbucketTests" */;
 			buildPhases = (
+				72D59ABCE5B31DCD206CFE81 /* 📦 Check Pods Manifest.lock */,
 				E9FA72B164C07EA5A7079BEE /* [CP] Check Pods Manifest.lock */,
 				14D6166C1D73792600801053 /* Sources */,
 				14D6166D1D73792600801053 /* Frameworks */,
 				14D6166E1D73792600801053 /* Resources */,
 				35C82B3E39D3F1F6B37949F2 /* [CP] Embed Pods Frameworks */,
 				EC3A681B8F3EF50C17A4DA29 /* [CP] Copy Pods Resources */,
+				08EE5A3F1FE98934BF482823 /* 📦 Embed Pods Frameworks */,
+				46BE48B9589812958362C25C /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -183,6 +189,7 @@
 				TargetAttributes = {
 					14D616601D73792600801053 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 56468X2PU5;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
 								enabled = 1;
@@ -237,6 +244,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		08EE5A3F1FE98934BF482823 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitbucketTests/Pods-BitbucketTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		303AFCF92F66E19AA5FB8ED4 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bitbucket/Pods-Bitbucket-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		318A970F57BE40FB7977AC02 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -265,6 +302,66 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitbucketTests/Pods-BitbucketTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46BE48B9589812958362C25C /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitbucketTests/Pods-BitbucketTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A4D9027038D0A660C7EC8A3 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bitbucket/Pods-Bitbucket-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72D59ABCE5B31DCD206CFE81 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9D8A6EA3AB0C0908672E05C6 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B11E3D7D603F38B58C78B593 /* [CP] Check Pods Manifest.lock */ = {
@@ -458,7 +555,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Bitbucket/Bitbucket.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer: Dmytro Morozov (J2A2SDKML9)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Bitbucket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -475,6 +572,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Bitbucket/Bitbucket.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = Bitbucket/Info.plist;

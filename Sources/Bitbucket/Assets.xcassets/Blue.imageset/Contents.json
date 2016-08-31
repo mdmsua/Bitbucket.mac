@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "mac",
-      "filename" : "bitbucket.png",
+      "filename" : "Blue.png",
       "scale" : "1x"
     },
     {
       "idiom" : "mac",
-      "filename" : "bitbucket@2x.png",
+      "filename" : "Blue@2x.png",
       "scale" : "2x"
     }
   ],
