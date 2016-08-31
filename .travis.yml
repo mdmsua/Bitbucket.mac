@@ -5,5 +5,4 @@ before_install:
   - brew update
   - brew install jq
   - gem update  
-  - gem install fastlane scan gym
 script: fastlane
