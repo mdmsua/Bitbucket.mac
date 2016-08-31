@@ -4,5 +4,5 @@ podfile: Sources/Podfile
 before_install:
   - brew update
   - brew install jq
-  - gem update  
+  - travis_wait gem update  
 script: fastlane
