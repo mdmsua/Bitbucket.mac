@@ -18,14 +18,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private var timer: NSTimer?
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        statusItem.button?.image = NSImage(named: "Bitbucket")
+        statusItem.button?.image = NSImage(named: "Black")
         statusItem.button?.image?.template = true
         statusItem.button?.imagePosition = .ImageLeft
         statusItem.button?.action = #selector(togglePopover)
         NSNotificationCenter.defaultCenter().addObserverForName("count", object: nil, queue: nil) {
             [weak self] notification -> Void in
             if let count = notification.object as? Int {
-                self?.statusItem.button?.title = String(count)
+                self?.updateStatusIcon(count)
             }
         }
         NSNotificationCenter.defaultCenter().addObserverForName("interval", object: nil, queue: nil) {
@@ -66,8 +66,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         BitbucketClient()?.getInboxPullRequestsCount {
             [weak self] (count, error) in
             if let count = count {
-                self?.statusItem.button?.title = String(count)
+                self?.updateStatusIcon(count)
             }
+        }
+    }
+    
+    private func updateStatusIcon(count: Int) {
+        if count > 0 {
+            self.statusItem.button?.image = NSImage(named: "Blue")
+            self.statusItem.button?.title = String(count)
+        } else {
+            self.statusItem.button?.image = NSImage(named: "Black")
+            self.statusItem.button?.title = ""
         }
     }
 }
