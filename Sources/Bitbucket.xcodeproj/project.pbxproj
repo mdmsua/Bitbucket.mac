@@ -198,6 +198,7 @@
 				TargetAttributes = {
 					14D616601D73792600801053 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 56468X2PU5;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
 								enabled = 1;
@@ -566,7 +567,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Bitbucket/Bitbucket.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer: Dmytro Morozov (J2A2SDKML9)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Bitbucket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -583,6 +584,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Bitbucket/Bitbucket.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = Bitbucket/Info.plist;
