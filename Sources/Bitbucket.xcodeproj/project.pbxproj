@@ -143,7 +143,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14D616791D73792600801053 /* Build configuration list for PBXNativeTarget "Bitbucket" */;
 			buildPhases = (
-				96DB06B173D301D0108177D7 /* 📦 Check Pods Manifest.lock */,
+				96DB06B173D301D0108177D7 /* [CP] Check Pods Manifest.lock */,
 				B11E3D7D603F38B58C78B593 /* [CP] Check Pods Manifest.lock */,
 				14D6165D1D73792600801053 /* Sources */,
 				14D6165E1D73792600801053 /* Frameworks */,
@@ -166,7 +166,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14D6167C1D73792600801053 /* Build configuration list for PBXNativeTarget "BitbucketTests" */;
 			buildPhases = (
-				66AB0776111B2B8E35D21BF8 /* 📦 Check Pods Manifest.lock */,
+				66AB0776111B2B8E35D21BF8 /* [CP] Check Pods Manifest.lock */,
 				E9FA72B164C07EA5A7079BEE /* [CP] Check Pods Manifest.lock */,
 				14D6166C1D73792600801053 /* Sources */,
 				14D6166D1D73792600801053 /* Frameworks */,
@@ -298,14 +298,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitbucketTests/Pods-BitbucketTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		66AB0776111B2B8E35D21BF8 /* 📦 Check Pods Manifest.lock */ = {
+		66AB0776111B2B8E35D21BF8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,14 +328,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bitbucket/Pods-Bitbucket-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		96DB06B173D301D0108177D7 /* 📦 Check Pods Manifest.lock */ = {
+		96DB06B173D301D0108177D7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -569,12 +569,14 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 4;
 				INFOPLIST_FILE = Bitbucket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mdmsua.Bitbucket;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -587,6 +589,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 4;
 				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = Bitbucket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -594,6 +597,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mdmsua.Bitbucket;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};

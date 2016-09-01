@@ -1,0 +1,7 @@
+workspace "Sources/Bitbucket.xcworkspace"
+scheme "Bitbucket"
+clean true
+output_directory "./"
+silent true
+include_symbols true
+include_bitcode true
