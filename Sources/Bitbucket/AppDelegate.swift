@@ -54,7 +54,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
-    private func closePopover() {
+    internal func closePopover() {
         popover.performClose(self)
     }
     
