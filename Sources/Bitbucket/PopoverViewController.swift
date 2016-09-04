@@ -19,6 +19,12 @@ class PopoverViewController: NSViewController {
     @IBOutlet private weak var intervalTextField: NSTextField!
     @IBOutlet private weak var check: NSButton!
     
+    var appDelegate: AppDelegate {
+        get {
+            return NSApplication.sharedApplication().delegate as! AppDelegate
+        }
+    }
+    
     @IBAction func save(sender: AnyObject) {
         let server = serverTextField.stringValue
         let username = usernameTextField.stringValue
@@ -26,13 +32,10 @@ class PopoverViewController: NSViewController {
         BitbucketClient(server: server, username: username, password: password).getInboxPullRequestsCount {
             [weak self] (count, error) in
             if let error = error {
-                let alert = NSAlert()
-                alert.alertStyle = .CriticalAlertStyle
-                alert.messageText = error.localizedDescription
-                alert.runModal()
+                self?.showErrorMessage(error)
             } else {
                 self?.saveSettings()
-                NSNotificationCenter.defaultCenter().postNotificationName("count", object: count)
+                self?.appDelegate.closePopover()
             }
         }
     }
@@ -65,4 +68,10 @@ class PopoverViewController: NSViewController {
         check.state = SettingStore.autostart ? NSOnState : NSOffState
     }
     
+    private func showErrorMessage(error: NSError) {
+        let alert = NSAlert()
+        alert.alertStyle = .CriticalAlertStyle
+        alert.messageText = error.localizedDescription
+        alert.runModal()
+    }
 }
