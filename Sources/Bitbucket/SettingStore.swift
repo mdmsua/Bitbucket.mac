@@ -21,4 +21,13 @@ class SettingStore {
         }
     }
     
+    static var autostart: Bool {
+        get {
+            return ubiquitousKeyValueStore.boolForKey("autostart")
+        }
+        set {
+            ubiquitousKeyValueStore.setBool(newValue, forKey: "autostart")
+        }
+    }
+    
 }

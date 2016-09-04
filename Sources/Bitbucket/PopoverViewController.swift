@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import ServiceManagement
 
 class PopoverViewController: NSViewController {
     
@@ -16,6 +17,7 @@ class PopoverViewController: NSViewController {
     @IBOutlet private weak var saveButton: NSButton!
     @IBOutlet private weak var slider: NSSlider!
     @IBOutlet private weak var intervalTextField: NSTextField!
+    @IBOutlet private weak var check: NSButton!
     
     var appDelegate: AppDelegate {
         get {
@@ -51,6 +53,9 @@ class PopoverViewController: NSViewController {
         CredentialStore.server = serverTextField.stringValue
         CredentialStore.username = usernameTextField.stringValue
         CredentialStore.password = passwordSecureTextField.stringValue
+        let state = check.state == NSOnState ? true : false
+        let enabled = SMLoginItemSetEnabled("com.mdmsua.BitbucketAgent", state)
+        SettingStore.autostart = enabled
         SettingStore.interval = slider.doubleValue
         NSNotificationCenter.defaultCenter().postNotificationName("interval", object: slider.doubleValue)
     }
@@ -60,6 +65,7 @@ class PopoverViewController: NSViewController {
         serverTextField.stringValue = CredentialStore.server ?? ""
         usernameTextField.stringValue = CredentialStore.username ?? ""
         passwordSecureTextField.stringValue = CredentialStore.password ?? ""
+        check.state = SettingStore.autostart ? NSOnState : NSOffState
     }
     
     private func showErrorMessage(error: NSError) {
