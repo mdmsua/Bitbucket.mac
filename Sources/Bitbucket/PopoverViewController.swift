@@ -40,8 +40,12 @@ class PopoverViewController: NSViewController {
         }
     }
     
-    @IBAction func sliderAction(sender: NSSlider) {
+    @IBAction private func sliderAction(sender: NSSlider) {
         intervalTextField.stringValue = "\(sender.integerValue) m"
+    }
+    
+    @IBAction private func quit(sender: AnyObject) {
+        NSApp.terminate(sender)
     }
     
     override func viewDidLoad() {

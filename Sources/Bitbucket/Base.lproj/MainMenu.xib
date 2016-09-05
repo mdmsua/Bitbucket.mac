@@ -35,7 +35,7 @@
                 <outlet property="contentViewController" destination="J5l-LN-05E" id="Hwh-cD-Adb"/>
             </connections>
         </popover>
-        <tabView id="7m7-Se-YZD">
+        <tabView initialItem="KR1-Pl-Ida" id="7m7-Se-YZD">
             <rect key="frame" x="0.0" y="0.0" width="270" height="296"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <font key="font" metaFont="system"/>
@@ -77,7 +77,7 @@
                                 </textFieldCell>
                             </textField>
                             <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="jCi-xn-dHa">
-                                <rect key="frame" x="17" y="150" width="216" height="5"/>
+                                <rect key="frame" x="17" y="150" width="216" height="4"/>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <font key="titleFont" metaFont="system"/>
@@ -125,6 +125,28 @@
                                 </secureTextFieldCell>
                             </secureTextField>
                         </subviews>
+                    </view>
+                </tabViewItem>
+                <tabViewItem label="Quit" identifier="" id="BoN-m7-mzM">
+                    <view key="view" id="7Gm-mc-Ygr">
+                        <rect key="frame" x="10" y="33" width="250" height="250"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BPn-pP-xL3">
+                                <rect key="frame" x="62" y="108" width="127" height="32"/>
+                                <buttonCell key="cell" type="push" title="Quit Bitbucket" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hj2-6F-Iow">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="quit:" target="J5l-LN-05E" id="zAx-q6-fWe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="BPn-pP-xL3" firstAttribute="centerX" secondItem="7Gm-mc-Ygr" secondAttribute="centerX" id="gK2-0I-RUM"/>
+                            <constraint firstItem="BPn-pP-xL3" firstAttribute="centerY" secondItem="7Gm-mc-Ygr" secondAttribute="centerY" id="ndj-7S-gX8"/>
+                        </constraints>
                     </view>
                 </tabViewItem>
             </tabViewItems>
