@@ -290,6 +290,7 @@
 				TargetAttributes = {
 					14C4D9A91D7CB3820082F6D1 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 56468X2PU5;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
 								enabled = 1;
@@ -298,6 +299,7 @@
 					};
 					14D616601D73792600801053 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 56468X2PU5;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
 								enabled = 1;
@@ -763,7 +765,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mdmsua.Bitbucket;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "454078ce-9eaf-426f-b950-50d946adcce2";
 			};
 			name = Debug;
 		};
@@ -782,7 +784,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mdmsua.Bitbucket;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "454078ce-9eaf-426f-b950-50d946adcce2";
 			};
 			name = Release;
 		};
