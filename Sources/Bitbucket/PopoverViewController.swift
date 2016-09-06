@@ -25,6 +25,10 @@ class PopoverViewController: NSViewController {
         }
     }
     
+    @IBAction func onTextFieldPressEnter(sender: AnyObject) {
+        self.save(sender);
+    }
+    
     @IBAction func save(sender: AnyObject) {
         let server = serverTextField.stringValue
         let username = usernameTextField.stringValue
