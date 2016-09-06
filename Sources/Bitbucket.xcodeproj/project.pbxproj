@@ -232,6 +232,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14D616791D73792600801053 /* Build configuration list for PBXNativeTarget "Bitbucket" */;
 			buildPhases = (
+				6A97AFA17503E214098941EA /* 📦 Check Pods Manifest.lock */,
 				907442AE5792DF9AE7F45F06 /* [CP] Check Pods Manifest.lock */,
 				96DB06B173D301D0108177D7 /* [CP] Check Pods Manifest.lock */,
 				B11E3D7D603F38B58C78B593 /* [CP] Check Pods Manifest.lock */,
@@ -257,6 +258,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14D6167C1D73792600801053 /* Build configuration list for PBXNativeTarget "BitbucketTests" */;
 			buildPhases = (
+				26D854458F91AE62A34B6936 /* 📦 Check Pods Manifest.lock */,
 				CD4EA23608FCC76DDE3023B4 /* [CP] Check Pods Manifest.lock */,
 				66AB0776111B2B8E35D21BF8 /* [CP] Check Pods Manifest.lock */,
 				E9FA72B164C07EA5A7079BEE /* [CP] Check Pods Manifest.lock */,
@@ -379,6 +381,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitbucketTests/Pods-BitbucketTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		26D854458F91AE62A34B6936 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		318A970F57BE40FB7977AC02 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -417,6 +434,21 @@
 			inputPaths = (
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6A97AFA17503E214098941EA /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -755,15 +787,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Bitbucket/Bitbucket.entitlements;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Bitbucket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mdmsua.Bitbucket;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1f8cbdd3-d3e5-4b82-adce-26fd5e186158";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -773,7 +805,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Bitbucket/Bitbucket.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = Bitbucket/Info.plist;
@@ -781,7 +814,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mdmsua.Bitbucket;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1f8cbdd3-d3e5-4b82-adce-26fd5e186158";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
