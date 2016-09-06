@@ -1,2 +1,2 @@
-# Bitbucket Inbox
-[![Build Status](https://travis-ci.org/PRInbox/PRInbox.svg?branch=master)](https://travis-ci.org/PRInbox/PRInbox)
+# PR
+[![Build Status](https://travis-ci.org/MacToolbox/PR.svg?branch=master)](https://travis-ci.org/MacToolbox/PR)
