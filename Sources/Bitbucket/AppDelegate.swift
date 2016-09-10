@@ -17,8 +17,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     private var timer: NSTimer?
     
+    private let fill = NSImage(named: "Fill")
+    
+    private let zero = NSImage(named: "Zero")
+    
+    private let sign = NSImage(named: "Sign")
+    
+    private let load = NSImage(named: "Load")
+    
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        statusItem.button?.image = NSImage(named: "Black")
+        statusItem.button?.image = zero
         statusItem.button?.image?.template = true
         statusItem.button?.imagePosition = .ImageLeft
         statusItem.button?.action = #selector(togglePopover)
@@ -36,7 +44,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
         }
         if SettingStore.interval > 0 {
-            self.scheduleInboxCheck(SettingStore.interval)
+            checkInbox()
+            scheduleInboxCheck(SettingStore.interval)
         }
     }
     
@@ -63,21 +72,29 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @objc private func checkInbox() {
+        statusItem.button?.image = load
+        statusItem.button?.imagePosition = .ImageOnly
         BitbucketClient()?.getInboxPullRequestsCount {
             [weak self] (count, error) in
             if let count = count {
                 self?.updateStatusIcon(count)
+            } else if let _ = error {
+                self?.updateStatusIcon(nil)
             }
         }
     }
     
-    private func updateStatusIcon(count: Int) {
-        if count > 0 {
-            self.statusItem.button?.image = NSImage(named: "Blue")
-            self.statusItem.button?.title = String(count)
+    private func updateStatusIcon(count: Int?) {
+        if let count = count {
+            if count > 0 {
+                self.statusItem.button?.image = fill
+                statusItem.button?.imagePosition = .ImageLeft
+                self.statusItem.button?.title = String(count)
+            } else {
+                self.statusItem.button?.image = zero
+            }
         } else {
-            self.statusItem.button?.image = NSImage(named: "Black")
-            self.statusItem.button?.title = ""
+            self.statusItem.button?.image = sign
         }
     }
 }

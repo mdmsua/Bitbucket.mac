@@ -74,6 +74,7 @@ class PopoverViewController: NSViewController {
         usernameTextField.stringValue = CredentialStore.username ?? ""
         passwordSecureTextField.stringValue = CredentialStore.password ?? ""
         check.state = SettingStore.autostart ? NSOnState : NSOffState
+        sliderAction(slider)
     }
     
     private func showErrorMessage(error: NSError) {
