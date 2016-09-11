@@ -2,9 +2,9 @@ platform :osx, '10.11'
 
 target 'Bitbucket' do
   use_frameworks!
-  pod 'KeychainAccess'
-  pod 'Alamofire'
-  pod 'SentrySwift'
+  pod 'KeychainAccess', '~> 2.3'
+  pod 'Alamofire', '~> 3.5'
+  pod 'SentrySwift', '~> 0.3'
   target 'BitbucketTests' do
     inherit! :search_paths
   end
