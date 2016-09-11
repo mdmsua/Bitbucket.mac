@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import SentrySwift
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -26,6 +27,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private let load = NSImage(named: "Load")
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
+        enableSentry()
         statusItem.button?.image = zero
         statusItem.button?.image?.template = true
         statusItem.button?.imagePosition = .ImageLeft
@@ -96,6 +98,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         } else {
             self.statusItem.button?.image = sign
         }
+    }
+    
+    private func enableSentry() {
+        #if RELEASE
+            SentryClient.shared = SentryClient(dsnString: "https://cb5739c5ac9d453284719beb8fe269f7:6cbe5139431e4e8b99bb2e5ed4e7b226@sentry.io/94601")
+            SentryClient.shared?.startCrashHandler()
+        #endif
     }
 }
 

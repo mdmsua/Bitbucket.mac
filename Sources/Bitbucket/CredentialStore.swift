@@ -8,6 +8,7 @@
 
 import Foundation
 import KeychainAccess
+import SentrySwift
 
 class CredentialStore {
     
@@ -39,7 +40,8 @@ class CredentialStore {
                     if let password = try keychain.get(username) {
                         return password
                     }
-                } catch {
+                } catch let error as NSError {
+                    SentryClient.shared?.captureError(error)
                     return nil
                 }
             }
@@ -50,8 +52,8 @@ class CredentialStore {
                 let keychain = Keychain(server: server, protocolType: .HTTPS, authenticationType: .HTMLForm)
                 do {
                     try keychain.set(value, key: username)
-                } catch {
-                    
+                } catch let error as NSError {
+                    SentryClient.shared?.captureError(error)
                 }
             }
         }

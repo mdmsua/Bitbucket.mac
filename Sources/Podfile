@@ -4,6 +4,7 @@ target 'Bitbucket' do
   use_frameworks!
   pod 'KeychainAccess'
   pod 'Alamofire'
+  pod 'SentrySwift'
   target 'BitbucketTests' do
     inherit! :search_paths
   end
