@@ -23,7 +23,6 @@
 		14EF24771D74DE2F0033C985 /* CredentialStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EF24761D74DE2F0033C985 /* CredentialStore.swift */; };
 		40421A47883FDF0A22D0FD77 /* Pods_PRTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F82459A049911EF1C9BA3227 /* Pods_PRTests.framework */; };
 		4CDB96A533CA5783AF5E4941 /* Pods_PR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFD638001AFEAC7157B81FDD /* Pods_PR.framework */; };
-		69ACA57134B9DB23E9B49A32 /* Pods_BitbucketTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF56EAFFBF60C626E510836 /* Pods_BitbucketTests.framework */; };
 		782226D41D7B788A00722DE6 /* SettingsTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782226D31D7B788A00722DE6 /* SettingsTextField.swift */; };
 /* End PBXBuildFile section */
 
@@ -105,7 +104,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69ACA57134B9DB23E9B49A32 /* Pods_BitbucketTests.framework in Frameworks */,
 				40421A47883FDF0A22D0FD77 /* Pods_PRTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,8 +272,6 @@
 				14D6166E1D73792600801053 /* Resources */,
 				35C82B3E39D3F1F6B37949F2 /* [CP] Embed Pods Frameworks */,
 				EC3A681B8F3EF50C17A4DA29 /* [CP] Copy Pods Resources */,
-				DD680976E4F00E55DAEB4E28 /* 📦 Embed Pods Frameworks */,
-				19FF474E6D81C3B4749DED94 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -373,21 +369,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		19FF474E6D81C3B4749DED94 /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitbucketTests/Pods-BitbucketTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		26D854458F91AE62A34B6936 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -536,21 +517,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PR/Pods-PR-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DD680976E4F00E55DAEB4E28 /* 📦 Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitbucketTests/Pods-BitbucketTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E9FA72B164C07EA5A7079BEE /* [CP] Check Pods Manifest.lock */ = {
@@ -795,7 +761,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-DRELEASE\"";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mdmsua.mactoolbox.pr.develop;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mdmsua.mactoolbox.pr;
 				PRODUCT_NAME = PR;
 				PROVISIONING_PROFILE = "";
 			};
