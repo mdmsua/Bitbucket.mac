@@ -7,9 +7,8 @@
 //
 
 import XCTest
-@testable import Bitbucket
 
-class BitbucketTests: XCTestCase {
+class SampleTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
