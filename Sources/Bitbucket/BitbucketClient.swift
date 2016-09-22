@@ -11,13 +11,13 @@ import KeychainAccess
 
 class BitbucketClient {
     
-    private let ubiquitousKeyValueStore = NSUbiquitousKeyValueStore.defaultStore()
+    fileprivate let ubiquitousKeyValueStore = NSUbiquitousKeyValueStore.default()
     
-    private var server: String
+    fileprivate var server: String
     
-    private var username: String
+    fileprivate var username: String
     
-    private var password: String
+    fileprivate var password: String
     
     init?() {
         if let server = CredentialStore.server, let username = CredentialStore.username, let password = CredentialStore.password {
@@ -36,22 +36,23 @@ class BitbucketClient {
         self.password = password
     }
     
-    func getInboxPullRequestsCount(handler: (count: Int?, error: NSError?) -> Void) {
-        let credentialData = "\(username):\(password)".dataUsingEncoding(NSUTF8StringEncoding)!
-        let base64Credentials = credentialData.base64EncodedStringWithOptions([])
-        let headers = ["Authorization": "Basic \(base64Credentials)"]
-        Alamofire.request(.GET, "\(server)/rest/api/1.0/inbox/pull-requests/count", headers: headers)
+    func getInboxPullRequestsCount(_ handler: @escaping (_ count: Int?, _ error: Error?) -> Void) {
+        var headers: HTTPHeaders = [:]
+        if let authorizationHeader = Request.authorizationHeader(user: username, password: password) {
+            headers[authorizationHeader.key] = authorizationHeader.value
+        }
+        Alamofire.request("\(server)/rest/api/1.0/inbox/pull-requests/count", headers: headers)
             .responseJSON { response in
-                if let json = response.result.value {
+                if let json = response.result.value as? [String: Any] {
                     if let count = json["count"] as? Int {
-                        handler(count: count, error: nil)
+                        handler(count, nil)
                     }
                     else if let errors = json["errors"] as? [AnyObject], let error = errors[0] as? [String: AnyObject], let message = error["message"] as? String {
                         let error = NSError(domain: "bitbucket", code: -(response.response?.statusCode)!, userInfo: [NSLocalizedDescriptionKey: NSLocalizedString(message, comment: "")])
-                        handler(count: nil, error: error)
+                        handler(nil, error)
                     }
                 } else if let error = response.result.error {
-                    handler(count: nil, error: error)
+                    handler(nil, error)
                 }
         }
     }

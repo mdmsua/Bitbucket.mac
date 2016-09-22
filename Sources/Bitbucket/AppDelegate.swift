@@ -12,33 +12,33 @@ import SentrySwift
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    @IBOutlet private weak var popover: NSPopover!
+    @IBOutlet fileprivate weak var popover: NSPopover!
 
-    private let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(NSVariableStatusItemLength)
+    fileprivate let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
     
-    private var timer: NSTimer?
+    fileprivate var timer: Timer?
     
-    private let fill = NSImage(named: "Fill")
+    fileprivate static let fill = NSImage(named: "Fill")
     
-    private let zero = NSImage(named: "Zero")
+    fileprivate static let zero = NSImage(named: "Zero")
     
-    private let sign = NSImage(named: "Sign")
+    fileprivate static let sign = NSImage(named: "Sign")
     
-    private let load = NSImage(named: "Load")
+    fileprivate static let load = NSImage(named: "Load")
     
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
         enableSentry()
-        statusItem.button?.image = zero
-        statusItem.button?.image?.template = true
-        statusItem.button?.imagePosition = .ImageLeft
+        statusItem.button?.image = AppDelegate.zero
+        statusItem.button?.image?.isTemplate = true
+        statusItem.button?.imagePosition = .imageLeft
         statusItem.button?.action = #selector(togglePopover)
-        NSNotificationCenter.defaultCenter().addObserverForName("count", object: nil, queue: nil) {
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "count"), object: nil, queue: nil) {
             [weak self] notification -> Void in
             if let count = notification.object as? Int {
                 self?.updateStatusIcon(count)
             }
         }
-        NSNotificationCenter.defaultCenter().addObserverForName("interval", object: nil, queue: nil) {
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "interval"), object: nil, queue: nil) {
             [weak self] notification -> Void in
             if let interval = notification.object as? Double {
                 self?.timer?.invalidate()
@@ -51,17 +51,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
-    @objc private func togglePopover() {
-        if (popover.shown) {
+    @objc fileprivate func togglePopover() {
+        if (popover.isShown) {
             closePopover()
         } else {
             showPopover()
         }
     }
     
-    private func showPopover() {
+    fileprivate func showPopover() {
         if let button = statusItem.button {
-            popover.showRelativeToRect(button.bounds, ofView: button, preferredEdge: .MinY)
+            popover.show(relativeTo: button.bounds, of: button, preferredEdge: .minY)
         }
     }
     
@@ -69,13 +69,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         popover.performClose(self)
     }
     
-    private func scheduleInboxCheck(interval: Double) {
-        timer = NSTimer.scheduledTimerWithTimeInterval(60.0 * interval, target: self, selector: #selector(checkInbox), userInfo: nil, repeats: true)
+    fileprivate func scheduleInboxCheck(_ interval: Double) {
+        timer = Timer.scheduledTimer(timeInterval: 60.0 * interval, target: self, selector: #selector(checkInbox), userInfo: nil, repeats: true)
     }
     
-    @objc private func checkInbox() {
-        statusItem.button?.image = load
-        statusItem.button?.imagePosition = .ImageOnly
+    @objc fileprivate func checkInbox() {
+        statusItem.button?.image = AppDelegate.load
+        statusItem.button?.imagePosition = .imageOnly
         BitbucketClient()?.getInboxPullRequestsCount {
             [weak self] (count, error) in
             if let count = count {
@@ -86,21 +86,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
-    private func updateStatusIcon(count: Int?) {
+    fileprivate func updateStatusIcon(_ count: Int?) {
         if let count = count {
             if count > 0 {
-                self.statusItem.button?.image = fill
-                statusItem.button?.imagePosition = .ImageLeft
+                self.statusItem.button?.image = AppDelegate.fill
+                statusItem.button?.imagePosition = .imageLeft
                 self.statusItem.button?.title = String(count)
             } else {
-                self.statusItem.button?.image = zero
+                self.statusItem.button?.image = AppDelegate.zero
             }
         } else {
-            self.statusItem.button?.image = sign
+            self.statusItem.button?.image = AppDelegate.sign
         }
     }
     
-    private func enableSentry() {
+    fileprivate func enableSentry() {
         #if RELEASE
             SentryClient.shared = SentryClient(dsnString: "https://cb5739c5ac9d453284719beb8fe269f7:6cbe5139431e4e8b99bb2e5ed4e7b226@sentry.io/94601")
             SentryClient.shared?.startCrashHandler()

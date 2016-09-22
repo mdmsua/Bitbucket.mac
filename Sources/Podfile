@@ -1,12 +1,19 @@
-platform :osx, '10.11'
+platform :osx, '10.12'
 
 target 'PR' do
   use_frameworks!
-  pod 'KeychainAccess', '~> 2.3'
-  pod 'Alamofire', '~> 3.5'
-  pod 'SentrySwift', '~> 0.3'
+  pod 'KeychainAccess', '~> 3.0'
+  pod 'Alamofire', '~> 4.0'
+  pod 'SentrySwift', '~> 0.4'
   target 'PRTests' do
     inherit! :search_paths
   end
+end
 
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['SWIFT_VERSION'] = '3.0'
+    end
+  end
 end

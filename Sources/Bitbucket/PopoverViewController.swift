@@ -11,25 +11,25 @@ import ServiceManagement
 
 class PopoverViewController: NSViewController {
     
-    @IBOutlet private weak var serverTextField: NSTextField!
-    @IBOutlet private weak var usernameTextField: NSTextField!
-    @IBOutlet private weak var passwordSecureTextField: NSSecureTextField!
-    @IBOutlet private weak var saveButton: NSButton!
-    @IBOutlet private weak var slider: NSSlider!
-    @IBOutlet private weak var intervalTextField: NSTextField!
-    @IBOutlet private weak var check: NSButton!
+    @IBOutlet fileprivate weak var serverTextField: NSTextField!
+    @IBOutlet fileprivate weak var usernameTextField: NSTextField!
+    @IBOutlet fileprivate weak var passwordSecureTextField: NSSecureTextField!
+    @IBOutlet fileprivate weak var saveButton: NSButton!
+    @IBOutlet fileprivate weak var slider: NSSlider!
+    @IBOutlet fileprivate weak var intervalTextField: NSTextField!
+    @IBOutlet fileprivate weak var check: NSButton!
     
     var appDelegate: AppDelegate {
         get {
-            return NSApplication.sharedApplication().delegate as! AppDelegate
+            return NSApplication.shared().delegate as! AppDelegate
         }
     }
     
-    @IBAction func onTextFieldPressEnter(sender: AnyObject) {
+    @IBAction func onTextFieldPressEnter(_ sender: AnyObject) {
         self.save(sender);
     }
     
-    @IBAction func save(sender: AnyObject) {
+    @IBAction func save(_ sender: AnyObject) {
         let server = serverTextField.stringValue
         let username = usernameTextField.stringValue
         let password = passwordSecureTextField.stringValue
@@ -44,11 +44,11 @@ class PopoverViewController: NSViewController {
         }
     }
     
-    @IBAction private func sliderAction(sender: NSSlider) {
+    @IBAction fileprivate func sliderAction(_ sender: NSSlider) {
         intervalTextField.stringValue = "\(sender.integerValue) m"
     }
     
-    @IBAction private func quit(sender: AnyObject) {
+    @IBAction fileprivate func quit(_ sender: AnyObject) {
         NSApp.terminate(sender)
     }
     
@@ -57,18 +57,18 @@ class PopoverViewController: NSViewController {
         loadSettings()
     }
     
-    private func saveSettings() {
+    fileprivate func saveSettings() {
         CredentialStore.server = serverTextField.stringValue
         CredentialStore.username = usernameTextField.stringValue
         CredentialStore.password = passwordSecureTextField.stringValue
         let state = check.state == NSOnState ? true : false
-        let enabled = SMLoginItemSetEnabled("com.mdmsua.BitbucketAgent", state)
+        let enabled = SMLoginItemSetEnabled("com.mdmsua.BitbucketAgent" as CFString, state)
         SettingStore.autostart = enabled
         SettingStore.interval = slider.doubleValue
-        NSNotificationCenter.defaultCenter().postNotificationName("interval", object: slider.doubleValue)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "interval"), object: slider.doubleValue)
     }
     
-    private func loadSettings() {
+    fileprivate func loadSettings() {
         slider.doubleValue = SettingStore.interval
         serverTextField.stringValue = CredentialStore.server ?? ""
         usernameTextField.stringValue = CredentialStore.username ?? ""
@@ -77,9 +77,9 @@ class PopoverViewController: NSViewController {
         sliderAction(slider)
     }
     
-    private func showErrorMessage(error: NSError) {
+    fileprivate func showErrorMessage(_ error: Error) {
         let alert = NSAlert()
-        alert.alertStyle = .CriticalAlertStyle
+        alert.alertStyle = .critical
         alert.messageText = error.localizedDescription
         alert.runModal()
     }
