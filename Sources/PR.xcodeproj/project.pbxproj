@@ -625,7 +625,7 @@
 				INFOPLIST_FILE = BitbucketAgent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mdmsua.mactoolbox.pr.agent;
+				PRODUCT_BUNDLE_IDENTIFIER = mac.toolbox.pr.agent.wip;
 				PRODUCT_NAME = "PR Agent";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -642,7 +642,7 @@
 				INFOPLIST_FILE = BitbucketAgent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mdmsua.mactoolbox.pr.agent;
+				PRODUCT_BUNDLE_IDENTIFIER = mac.toolbox.pr.agent;
 				PRODUCT_NAME = "PR Agent";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -753,7 +753,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-DDEBUG\"";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mdmsua.mactoolbox.pr.develop;
+				PRODUCT_BUNDLE_IDENTIFIER = mac.toolbox.pr.wip;
 				PRODUCT_NAME = PR;
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
@@ -776,7 +776,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-DRELEASE\"";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mdmsua.mactoolbox.pr;
+				PRODUCT_BUNDLE_IDENTIFIER = mac.toolbox.pr;
 				PRODUCT_NAME = PR;
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;

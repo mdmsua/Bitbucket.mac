@@ -62,7 +62,7 @@ class PopoverViewController: NSViewController {
         CredentialStore.username = usernameTextField.stringValue
         CredentialStore.password = passwordSecureTextField.stringValue
         let state = check.state == NSOnState ? true : false
-        let enabled = SMLoginItemSetEnabled("com.mdmsua.BitbucketAgent" as CFString, state)
+        let enabled = SMLoginItemSetEnabled("mac.toolbox.pr.agent" as CFString, state)
         SettingStore.autostart = enabled
         SettingStore.interval = slider.doubleValue
         NotificationCenter.default.post(name: Notification.Name(rawValue: "interval"), object: slider.doubleValue)
