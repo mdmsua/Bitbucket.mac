@@ -77,7 +77,7 @@ class PopoverViewController: NSViewController {
         sliderAction(slider)
     }
     
-    fileprivate func showErrorMessage(_ error: NSError) {
+    fileprivate func showErrorMessage(_ error: Error) {
         let alert = NSAlert()
         alert.alertStyle = .critical
         alert.messageText = error.localizedDescription

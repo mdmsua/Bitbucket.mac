@@ -23,6 +23,7 @@
 		14EF24771D74DE2F0033C985 /* CredentialStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EF24761D74DE2F0033C985 /* CredentialStore.swift */; };
 		40421A47883FDF0A22D0FD77 /* Pods_PRTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F82459A049911EF1C9BA3227 /* Pods_PRTests.framework */; };
 		4CDB96A533CA5783AF5E4941 /* Pods_PR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFD638001AFEAC7157B81FDD /* Pods_PR.framework */; };
+		660399D21D93CA5A005698EE /* BitbucketRequestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660399D11D93CA5A005698EE /* BitbucketRequestAdapter.swift */; };
 		782226D41D7B788A00722DE6 /* SettingsTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782226D31D7B788A00722DE6 /* SettingsTextField.swift */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		14EF24761D74DE2F0033C985 /* CredentialStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialStore.swift; sourceTree = "<group>"; };
 		4E39B42FD92A8245AF0B2A8C /* Pods-PR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PR.release.xcconfig"; path = "Pods/Target Support Files/Pods-PR/Pods-PR.release.xcconfig"; sourceTree = "<group>"; };
 		5C720427908521F0F1752651 /* Pods-PRTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PRTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PRTests/Pods-PRTests.debug.xcconfig"; sourceTree = "<group>"; };
+		660399D11D93CA5A005698EE /* BitbucketRequestAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitbucketRequestAdapter.swift; sourceTree = "<group>"; };
 		6DF56EAFFBF60C626E510836 /* Pods_BitbucketTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitbucketTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		762A2E4C93F4F2595280F3B7 /* Pods-PRTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PRTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PRTests/Pods-PRTests.release.xcconfig"; sourceTree = "<group>"; };
 		782226D31D7B788A00722DE6 /* SettingsTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTextField.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				782226D21D7B787200722DE6 /* Controls */,
 				14EF24761D74DE2F0033C985 /* CredentialStore.swift */,
 				141A39A61D74E1AF006B4247 /* SettingStore.swift */,
+				660399D11D93CA5A005698EE /* BitbucketRequestAdapter.swift */,
 			);
 			name = Application;
 			path = Bitbucket;
@@ -573,6 +576,7 @@
 				141A39A71D74E1AF006B4247 /* SettingStore.swift in Sources */,
 				14D616801D737E6C00801053 /* PopoverViewController.swift in Sources */,
 				14EF24751D74D4DD0033C985 /* BitbucketClient.swift in Sources */,
+				660399D21D93CA5A005698EE /* BitbucketRequestAdapter.swift in Sources */,
 				14D616651D73792600801053 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -748,6 +752,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 56468X2PU5;
 				INFOPLIST_FILE = Bitbucket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -769,6 +774,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 56468X2PU5;
 				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = Bitbucket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";

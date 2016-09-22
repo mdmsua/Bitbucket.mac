@@ -36,22 +36,21 @@ class BitbucketClient {
         self.password = password
     }
     
-    func getInboxPullRequestsCount(_ handler: @escaping (_ count: Int?, _ error: NSError?) -> Void) {
-        let credentialData = "\(username):\(password)".data(using: String.Encoding.utf8)!
-        let base64Credentials = credentialData.base64EncodedString(options: [])
-        let headers = ["Authorization": "Basic \(base64Credentials)"]
-        Alamofire.request(.GET, "\(server)/rest/api/1.0/inbox/pull-requests/count", headers: headers)
+    func getInboxPullRequestsCount(_ handler: @escaping (_ count: Int?, _ error: Error?) -> Void) {
+        let sessionManager = SessionManager()
+        sessionManager.adapter = BitbucketRequestAdapter(username: username, password: password)
+        sessionManager.request("\(server)/rest/api/1.0/inbox/pull-requests/count")
             .responseJSON { response in
-                if let json = response.result.value {
+                if let json = response.result.value as? [String: Any] {
                     if let count = json["count"] as? Int {
-                        handler(count: count, error: nil)
+                        handler(count, nil)
                     }
                     else if let errors = json["errors"] as? [AnyObject], let error = errors[0] as? [String: AnyObject], let message = error["message"] as? String {
                         let error = NSError(domain: "bitbucket", code: -(response.response?.statusCode)!, userInfo: [NSLocalizedDescriptionKey: NSLocalizedString(message, comment: "")])
-                        handler(count: nil, error: error)
+                        handler(nil, error)
                     }
                 } else if let error = response.result.error {
-                    handler(count: nil, error: error)
+                    handler(nil, error)
                 }
         }
     }
