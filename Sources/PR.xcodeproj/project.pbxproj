@@ -290,12 +290,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Dmytro Morozov";
 				TargetAttributes = {
 					14C4D9A91D7CB3820082F6D1 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 56468X2PU5;
+						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
 								enabled = 1;
@@ -305,6 +306,7 @@
 					14D616601D73792600801053 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 56468X2PU5;
+						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
 								enabled = 1;
@@ -316,6 +318,7 @@
 					};
 					14D6166F1D73792600801053 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 14D616601D73792600801053;
 					};
 				};
@@ -625,6 +628,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mdmsua.mactoolbox.pr.agent;
 				PRODUCT_NAME = "PR Agent";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -641,6 +645,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mdmsua.mactoolbox.pr.agent;
 				PRODUCT_NAME = "PR Agent";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -658,8 +663,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -704,8 +711,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -724,6 +733,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -732,6 +742,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BBE1DA25FD16566A10B31BDB /* Pods-PR.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Bitbucket/Application.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -744,6 +755,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mdmsua.mactoolbox.pr.develop;
 				PRODUCT_NAME = PR;
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -751,6 +763,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4E39B42FD92A8245AF0B2A8C /* Pods-PR.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Bitbucket/Application.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -764,6 +777,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mdmsua.mactoolbox.pr;
 				PRODUCT_NAME = PR;
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -778,6 +792,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mdmsua.mactoolbox.pr.tests;
 				PRODUCT_NAME = PR;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PR.app/Contents/MacOS/PR";
 			};
 			name = Debug;
@@ -793,6 +808,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mdmsua.mactoolbox.pr.tests;
 				PRODUCT_NAME = PR;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PR.app/Contents/MacOS/PR";
 			};
 			name = Release;

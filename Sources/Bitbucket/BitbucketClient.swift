@@ -11,13 +11,13 @@ import KeychainAccess
 
 class BitbucketClient {
     
-    private let ubiquitousKeyValueStore = NSUbiquitousKeyValueStore.defaultStore()
+    fileprivate let ubiquitousKeyValueStore = NSUbiquitousKeyValueStore.default()
     
-    private var server: String
+    fileprivate var server: String
     
-    private var username: String
+    fileprivate var username: String
     
-    private var password: String
+    fileprivate var password: String
     
     init?() {
         if let server = CredentialStore.server, let username = CredentialStore.username, let password = CredentialStore.password {
@@ -36,9 +36,9 @@ class BitbucketClient {
         self.password = password
     }
     
-    func getInboxPullRequestsCount(handler: (count: Int?, error: NSError?) -> Void) {
-        let credentialData = "\(username):\(password)".dataUsingEncoding(NSUTF8StringEncoding)!
-        let base64Credentials = credentialData.base64EncodedStringWithOptions([])
+    func getInboxPullRequestsCount(_ handler: @escaping (_ count: Int?, _ error: NSError?) -> Void) {
+        let credentialData = "\(username):\(password)".data(using: String.Encoding.utf8)!
+        let base64Credentials = credentialData.base64EncodedString(options: [])
         let headers = ["Authorization": "Basic \(base64Credentials)"]
         Alamofire.request(.GET, "\(server)/rest/api/1.0/inbox/pull-requests/count", headers: headers)
             .responseJSON { response in

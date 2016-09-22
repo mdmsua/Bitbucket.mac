@@ -10,10 +10,10 @@ import Cocoa
 
 class SettingsTextField: NSTextField {
 
-    override func performKeyEquivalent(event: NSEvent) -> Bool {
-        if event.type == NSEventType.KeyDown {
-            let keyModifier = event.modifierFlags.rawValue & NSEventModifierFlags.DeviceIndependentModifierFlagsMask.rawValue
-            if keyModifier == NSEventModifierFlags.CommandKeyMask.rawValue {
+    override func performKeyEquivalent(with event: NSEvent) -> Bool {
+        if event.type == NSEventType.keyDown {
+            let keyModifier = event.modifierFlags.rawValue & NSEventModifierFlags.deviceIndependentFlagsMask.rawValue
+            if keyModifier == NSEventModifierFlags.command.rawValue {
                 switch event.charactersIgnoringModifiers! {
                     case "x":
                         return NSApp.sendAction(#selector(NSText.cut(_:)), to:nil, from:self)
@@ -26,6 +26,6 @@ class SettingsTextField: NSTextField {
                 }
             }
         }
-        return super.performKeyEquivalent(event)
+        return super.performKeyEquivalent(with: event)
     }
 }

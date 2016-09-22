@@ -12,36 +12,36 @@ import SentrySwift
 
 class CredentialStore {
     
-    private static let ubiquitousKeyValueStore = NSUbiquitousKeyValueStore.defaultStore()
+    fileprivate static let ubiquitousKeyValueStore = NSUbiquitousKeyValueStore.default()
     
     static var server: String? {
         get {
-            return ubiquitousKeyValueStore.stringForKey("server")
+            return ubiquitousKeyValueStore.string(forKey: "server")
         }
         set {
-            ubiquitousKeyValueStore.setString(newValue, forKey: "server")
+            ubiquitousKeyValueStore.set(newValue, forKey: "server")
         }
     }
     
     static var username: String? {
         get {
-            return ubiquitousKeyValueStore.stringForKey("username")
+            return ubiquitousKeyValueStore.string(forKey: "username")
         }
         set {
-            ubiquitousKeyValueStore.setString(newValue, forKey: "username")
+            ubiquitousKeyValueStore.set(newValue, forKey: "username")
         }
     }
     
     static var password: String? {
         get {
             if let server = server, let username = username {
-                let keychain = Keychain(server: server, protocolType: .HTTPS, authenticationType: .HTMLForm)
+                let keychain = Keychain(server: server, protocolType: .https, authenticationType: .htmlForm)
                 do {
                     if let password = try keychain.get(username) {
                         return password
                     }
                 } catch let error as NSError {
-                    SentryClient.shared?.captureError(error)
+                    SentryClient.shared?.captureError(error: error)
                     return nil
                 }
             }
@@ -49,11 +49,11 @@ class CredentialStore {
         }
         set {
             if let server = server, let username = username, let value = newValue {
-                let keychain = Keychain(server: server, protocolType: .HTTPS, authenticationType: .HTMLForm)
+                let keychain = Keychain(server: server, protocolType: .https, authenticationType: .htmlForm)
                 do {
                     try keychain.set(value, key: username)
                 } catch let error as NSError {
-                    SentryClient.shared?.captureError(error)
+                    SentryClient.shared?.captureError(error: error)
                 }
             }
         }
