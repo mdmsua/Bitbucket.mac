@@ -37,9 +37,11 @@ class BitbucketClient {
     }
     
     func getInboxPullRequestsCount(_ handler: @escaping (_ count: Int?, _ error: Error?) -> Void) {
-        let sessionManager = SessionManager()
-        sessionManager.adapter = BitbucketRequestAdapter(username: username, password: password)
-        sessionManager.request("\(server)/rest/api/1.0/inbox/pull-requests/count")
+        var headers: HTTPHeaders = [:]
+        if let authorizationHeader = Request.authorizationHeader(user: username, password: password) {
+            headers[authorizationHeader.key] = authorizationHeader.value
+        }
+        Alamofire.request("\(server)/rest/api/1.0/inbox/pull-requests/count", headers: headers)
             .responseJSON { response in
                 if let json = response.result.value as? [String: Any] {
                     if let count = json["count"] as? Int {
