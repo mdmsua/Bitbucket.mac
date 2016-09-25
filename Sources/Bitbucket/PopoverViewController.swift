@@ -21,6 +21,7 @@ class PopoverViewController: NSViewController {
     @IBOutlet fileprivate weak var version: NSTextField!
     @IBOutlet fileprivate weak var copyright: NSTextField!
     @IBOutlet fileprivate weak var reference: NSTextField!
+    @IBOutlet fileprivate weak var progressIndicator: NSProgressIndicator!
     
     var appDelegate: AppDelegate {
         get {
@@ -36,8 +37,12 @@ class PopoverViewController: NSViewController {
         let server = serverTextField.stringValue
         let username = usernameTextField.stringValue
         let password = passwordSecureTextField.stringValue
+        saveButton.isHidden = true
+        progressIndicator.startAnimation(sender)
         BitbucketClient(server: server, username: username, password: password).getInboxPullRequestsCount {
             [weak self] (count, error) in
+            self?.progressIndicator.stopAnimation(sender)
+            self?.saveButton.isHidden = false
             if let error = error {
                 self?.showErrorMessage(error)
             } else {
