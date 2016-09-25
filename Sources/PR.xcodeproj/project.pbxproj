@@ -534,7 +534,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = BitbucketAgent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = mac.toolbox.pr.agent.wip;
 				PRODUCT_NAME = "PR Agent";
 				SKIP_INSTALL = YES;
@@ -551,7 +551,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = BitbucketAgent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = mac.toolbox.pr.agent;
 				PRODUCT_NAME = "PR Agent";
 				SKIP_INSTALL = YES;
@@ -661,7 +661,7 @@
 				DEVELOPMENT_TEAM = 56468X2PU5;
 				INFOPLIST_FILE = Bitbucket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-DDEBUG\"";
 				PRODUCT_BUNDLE_IDENTIFIER = mac.toolbox.pr.wip;
 				PRODUCT_NAME = PR;
@@ -684,7 +684,7 @@
 				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = Bitbucket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-DRELEASE\"";
 				PRODUCT_BUNDLE_IDENTIFIER = mac.toolbox.pr;
 				PRODUCT_NAME = PR;
