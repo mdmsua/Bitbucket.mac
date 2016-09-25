@@ -5,7 +5,7 @@ target 'PR' do
   pod 'KeychainAccess', '~> 3.0'
   pod 'Alamofire', '~> 4.0'
   pod 'SentrySwift', '~> 0.4'
-  target 'PRTests' do
+  target 'Tests' do
     inherit! :search_paths
   end
 end
