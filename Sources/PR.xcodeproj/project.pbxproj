@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		141A39A71D74E1AF006B4247 /* SettingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141A39A61D74E1AF006B4247 /* SettingStore.swift */; };
 		143C6B351D7AF4E6006CF7EF /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143C6B341D7AF4E6006CF7EF /* ServiceManagement.framework */; };
+		14C471041D97F6DE00DE721E /* PR Agent.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 14C4D9AA1D7CB3820082F6D1 /* PR Agent.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		14C4D9AE1D7CB3820082F6D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C4D9AD1D7CB3820082F6D1 /* AppDelegate.m */; };
 		14C4D9B11D7CB3820082F6D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C4D9B01D7CB3820082F6D1 /* main.m */; };
 		14C4D9B31D7CB3820082F6D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14C4D9B21D7CB3820082F6D1 /* Assets.xcassets */; };
 		14C4D9B61D7CB3820082F6D1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14C4D9B41D7CB3820082F6D1 /* MainMenu.xib */; };
-		14C4D9BC1D7CB3F70082F6D1 /* PR Agent.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 14C4D9AA1D7CB3820082F6D1 /* PR Agent.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		14D616651D73792600801053 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D616641D73792600801053 /* AppDelegate.swift */; };
 		14D616671D73792600801053 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14D616661D73792600801053 /* Assets.xcassets */; };
 		14D6166A1D73792600801053 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14D616681D73792600801053 /* MainMenu.xib */; };
@@ -43,7 +43,7 @@
 			dstPath = Contents/Library/LoginItems;
 			dstSubfolderSpec = 1;
 			files = (
-				14C4D9BC1D7CB3F70082F6D1 /* PR Agent.app in CopyFiles */,
+				14C471041D97F6DE00DE721E /* PR Agent.app in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,9 +218,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		14C4D9A91D7CB3820082F6D1 /* PRAgent */ = {
+		14C4D9A91D7CB3820082F6D1 /* Agent */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 14C4D9B81D7CB3820082F6D1 /* Build configuration list for PBXNativeTarget "PRAgent" */;
+			buildConfigurationList = 14C4D9B81D7CB3820082F6D1 /* Build configuration list for PBXNativeTarget "Agent" */;
 			buildPhases = (
 				14C4D9A61D7CB3820082F6D1 /* Sources */,
 				14C4D9A71D7CB3820082F6D1 /* Frameworks */,
@@ -230,7 +230,7 @@
 			);
 			dependencies = (
 			);
-			name = PRAgent;
+			name = Agent;
 			productName = BitbucketAgent;
 			productReference = 14C4D9AA1D7CB3820082F6D1 /* PR Agent.app */;
 			productType = "com.apple.product-type.application";
@@ -259,9 +259,9 @@
 			productReference = 14D616611D73792600801053 /* PR.app */;
 			productType = "com.apple.product-type.application";
 		};
-		14D6166F1D73792600801053 /* PRTests */ = {
+		14D6166F1D73792600801053 /* Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 14D6167C1D73792600801053 /* Build configuration list for PBXNativeTarget "PRTests" */;
+			buildConfigurationList = 14D6167C1D73792600801053 /* Build configuration list for PBXNativeTarget "Tests" */;
 			buildPhases = (
 				26D854458F91AE62A34B6936 /* [CP] Check Pods Manifest.lock */,
 				CD4EA23608FCC76DDE3023B4 /* [CP] Check Pods Manifest.lock */,
@@ -278,7 +278,7 @@
 			dependencies = (
 				14D616721D73792600801053 /* PBXTargetDependency */,
 			);
-			name = PRTests;
+			name = Tests;
 			productName = BitbucketTests;
 			productReference = 14D616701D73792600801053 /* PR.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -337,8 +337,8 @@
 			projectRoot = "";
 			targets = (
 				14D616601D73792600801053 /* PR */,
-				14D6166F1D73792600801053 /* PRTests */,
-				14C4D9A91D7CB3820082F6D1 /* PRAgent */,
+				14D6166F1D73792600801053 /* Tests */,
+				14C4D9A91D7CB3820082F6D1 /* Agent */,
 			);
 		};
 /* End PBXProject section */
@@ -624,7 +624,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = BitbucketAgent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = mac.toolbox.pr.agent.wip;
 				PRODUCT_NAME = "PR Agent";
 				SKIP_INSTALL = YES;
@@ -641,7 +641,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = BitbucketAgent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = mac.toolbox.pr.agent;
 				PRODUCT_NAME = "PR Agent";
 				SKIP_INSTALL = YES;
@@ -751,7 +751,7 @@
 				DEVELOPMENT_TEAM = 56468X2PU5;
 				INFOPLIST_FILE = Bitbucket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-DDEBUG\"";
 				PRODUCT_BUNDLE_IDENTIFIER = mac.toolbox.pr.wip;
 				PRODUCT_NAME = PR;
@@ -774,7 +774,7 @@
 				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = Bitbucket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-DRELEASE\"";
 				PRODUCT_BUNDLE_IDENTIFIER = mac.toolbox.pr;
 				PRODUCT_NAME = PR;
@@ -818,7 +818,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		14C4D9B81D7CB3820082F6D1 /* Build configuration list for PBXNativeTarget "PRAgent" */ = {
+		14C4D9B81D7CB3820082F6D1 /* Build configuration list for PBXNativeTarget "Agent" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				14C4D9B91D7CB3820082F6D1 /* Debug */,
@@ -845,7 +845,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		14D6167C1D73792600801053 /* Build configuration list for PBXNativeTarget "PRTests" */ = {
+		14D6167C1D73792600801053 /* Build configuration list for PBXNativeTarget "Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				14D6167D1D73792600801053 /* Debug */,

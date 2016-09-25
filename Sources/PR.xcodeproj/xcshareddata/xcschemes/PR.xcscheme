@@ -34,7 +34,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "14D6166F1D73792600801053"
                BuildableName = "PR.xctest"
-               BlueprintName = "PRTests"
+               BlueprintName = "Tests"
                ReferencedContainer = "container:PR.xcodeproj">
             </BuildableReference>
          </TestableReference>
