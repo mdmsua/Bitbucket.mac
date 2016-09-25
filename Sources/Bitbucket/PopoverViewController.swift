@@ -18,6 +18,9 @@ class PopoverViewController: NSViewController {
     @IBOutlet fileprivate weak var slider: NSSlider!
     @IBOutlet fileprivate weak var intervalTextField: NSTextField!
     @IBOutlet fileprivate weak var check: NSButton!
+    @IBOutlet fileprivate weak var version: NSTextField!
+    @IBOutlet fileprivate weak var copyright: NSTextField!
+    @IBOutlet fileprivate weak var reference: NSTextField!
     
     var appDelegate: AppDelegate {
         get {
@@ -55,6 +58,7 @@ class PopoverViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadSettings()
+        loadAbout()
     }
     
     fileprivate func saveSettings() {
@@ -77,10 +81,23 @@ class PopoverViewController: NSViewController {
         sliderAction(slider)
     }
     
+    fileprivate func loadAbout() {
+        if let bundleShortVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String, let bundleVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") {
+            version.stringValue = "\(bundleShortVersion) (\(bundleVersion))"
+        }
+        if let bundleReadableCopyright = Bundle.main.object(forInfoDictionaryKey: "NSHumanReadableCopyright") as? String {
+            copyright.stringValue = bundleReadableCopyright
+        }
+    }
+    
     fileprivate func showErrorMessage(_ error: Error) {
         let alert = NSAlert()
         alert.alertStyle = .critical
         alert.messageText = error.localizedDescription
         alert.runModal()
+    }
+    
+    @IBAction fileprivate func openLink(_ sender: NSButton) {
+        NSWorkspace.shared().open(URL(string: "https://icons8.com")!)
     }
 }
