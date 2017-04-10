@@ -9,9 +9,7 @@
 import Foundation
 
 class SettingStore {
-    
     fileprivate static let ubiquitousKeyValueStore = NSUbiquitousKeyValueStore.default()
-    
     static var interval: Double {
         get {
             return ubiquitousKeyValueStore.double(forKey: "interval")
@@ -20,7 +18,6 @@ class SettingStore {
             ubiquitousKeyValueStore.set(newValue, forKey: "interval")
         }
     }
-    
     static var autostart: Bool {
         get {
             return ubiquitousKeyValueStore.bool(forKey: "autostart")
@@ -29,5 +26,4 @@ class SettingStore {
             ubiquitousKeyValueStore.set(newValue, forKey: "autostart")
         }
     }
-    
 }

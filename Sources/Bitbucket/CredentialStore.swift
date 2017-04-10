@@ -11,9 +11,7 @@ import KeychainAccess
 import Sentry
 
 class CredentialStore {
-    
     fileprivate static let ubiquitousKeyValueStore = NSUbiquitousKeyValueStore.default()
-    
     static var server: String? {
         get {
             return ubiquitousKeyValueStore.string(forKey: "server")
@@ -22,7 +20,6 @@ class CredentialStore {
             ubiquitousKeyValueStore.set(newValue, forKey: "server")
         }
     }
-    
     static var username: String? {
         get {
             return ubiquitousKeyValueStore.string(forKey: "username")
@@ -31,7 +28,6 @@ class CredentialStore {
             ubiquitousKeyValueStore.set(newValue, forKey: "username")
         }
     }
-    
     static var password: String? {
         get {
             if let server = server, let username = username {
