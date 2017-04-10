@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0800"
+   LastUpgradeVersion = "0820"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "14D616601D73792600801053"
-               BuildableName = "PR.app"
-               BlueprintName = "PR"
-               ReferencedContainer = "container:PR.xcodeproj">
+               BuildableName = "Bitbucket.app"
+               BlueprintName = "Bitbucket"
+               ReferencedContainer = "container:Bitbucket.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,24 +28,14 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "14D6166F1D73792600801053"
-               BuildableName = "PR.xctest"
-               BlueprintName = "Tests"
-               ReferencedContainer = "container:PR.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "14D616601D73792600801053"
-            BuildableName = "PR.app"
-            BlueprintName = "PR"
-            ReferencedContainer = "container:PR.xcodeproj">
+            BuildableName = "Bitbucket.app"
+            BlueprintName = "Bitbucket"
+            ReferencedContainer = "container:Bitbucket.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "14D616601D73792600801053"
-            BuildableName = "PR.app"
-            BlueprintName = "PR"
-            ReferencedContainer = "container:PR.xcodeproj">
+            BuildableName = "Bitbucket.app"
+            BlueprintName = "Bitbucket"
+            ReferencedContainer = "container:Bitbucket.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -85,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "14D616601D73792600801053"
-            BuildableName = "PR.app"
-            BlueprintName = "PR"
-            ReferencedContainer = "container:PR.xcodeproj">
+            BuildableName = "Bitbucket.app"
+            BlueprintName = "Bitbucket"
+            ReferencedContainer = "container:Bitbucket.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -8,7 +8,7 @@
 
 import Foundation
 import KeychainAccess
-import SentrySwift
+import Sentry
 
 class CredentialStore {
     

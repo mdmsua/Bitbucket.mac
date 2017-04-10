@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		141A39A71D74E1AF006B4247 /* SettingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141A39A61D74E1AF006B4247 /* SettingStore.swift */; };
 		143C6B351D7AF4E6006CF7EF /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143C6B341D7AF4E6006CF7EF /* ServiceManagement.framework */; };
-		14C471041D97F6DE00DE721E /* PR Agent.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 14C4D9AA1D7CB3820082F6D1 /* PR Agent.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		14C471041D97F6DE00DE721E /* Bitbucket Agent.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 14C4D9AA1D7CB3820082F6D1 /* Bitbucket Agent.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		14C4D9AE1D7CB3820082F6D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C4D9AD1D7CB3820082F6D1 /* AppDelegate.m */; };
 		14C4D9B11D7CB3820082F6D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C4D9B01D7CB3820082F6D1 /* main.m */; };
 		14C4D9B31D7CB3820082F6D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14C4D9B21D7CB3820082F6D1 /* Assets.xcassets */; };
@@ -21,9 +21,9 @@
 		14D616801D737E6C00801053 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D6167F1D737E6C00801053 /* PopoverViewController.swift */; };
 		14EF24751D74D4DD0033C985 /* BitbucketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EF24741D74D4DD0033C985 /* BitbucketClient.swift */; };
 		14EF24771D74DE2F0033C985 /* CredentialStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EF24761D74DE2F0033C985 /* CredentialStore.swift */; };
-		4CDB96A533CA5783AF5E4941 /* Pods_PR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFD638001AFEAC7157B81FDD /* Pods_PR.framework */; };
 		782226D41D7B788A00722DE6 /* SettingsTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782226D31D7B788A00722DE6 /* SettingsTextField.swift */; };
 		792B1813BF7A8A1B5B58E21C /* Pods_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6387F170C9B6C5631D9DF7 /* Pods_Tests.framework */; };
+		AB4B3FD723CF274A4953D5FC /* Pods_Bitbucket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED50936BCE87E1CE7D5AF63 /* Pods_Bitbucket.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +43,7 @@
 			dstPath = Contents/Library/LoginItems;
 			dstSubfolderSpec = 1;
 			files = (
-				14C471041D97F6DE00DE721E /* PR Agent.app in CopyFiles */,
+				14C471041D97F6DE00DE721E /* Bitbucket Agent.app in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +52,7 @@
 /* Begin PBXFileReference section */
 		141A39A61D74E1AF006B4247 /* SettingStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingStore.swift; sourceTree = "<group>"; };
 		143C6B341D7AF4E6006CF7EF /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
-		14C4D9AA1D7CB3820082F6D1 /* PR Agent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PR Agent.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		14C4D9AA1D7CB3820082F6D1 /* Bitbucket Agent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bitbucket Agent.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14C4D9AC1D7CB3820082F6D1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		14C4D9AD1D7CB3820082F6D1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		14C4D9B01D7CB3820082F6D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,30 +60,26 @@
 		14C4D9B51D7CB3820082F6D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		14C4D9B71D7CB3820082F6D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14C4D9BB1D7CB3950082F6D1 /* Agent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Agent.entitlements; sourceTree = "<group>"; };
-		14D616611D73792600801053 /* PR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PR.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14D616611D73792600801053 /* Bitbucket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bitbucket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14D616641D73792600801053 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14D616661D73792600801053 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14D616691D73792600801053 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		14D6166B1D73792600801053 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		14D616701D73792600801053 /* PR.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PR.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14D616701D73792600801053 /* Bitbucket.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Bitbucket.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14D616741D73792600801053 /* SampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTests.swift; sourceTree = "<group>"; };
 		14D616761D73792600801053 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14D6167F1D737E6C00801053 /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
 		14D616811D73862000801053 /* Application.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Application.entitlements; sourceTree = "<group>"; };
 		14EF24741D74D4DD0033C985 /* BitbucketClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitbucketClient.swift; sourceTree = "<group>"; };
 		14EF24761D74DE2F0033C985 /* CredentialStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialStore.swift; sourceTree = "<group>"; };
+		1989F9D6F3259DF1A04597FF /* Pods-Bitbucket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitbucket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bitbucket/Pods-Bitbucket.debug.xcconfig"; sourceTree = "<group>"; };
 		3053DA0DB1B692B4F3C35882 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		4E39B42FD92A8245AF0B2A8C /* Pods-PR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PR.release.xcconfig"; path = "Pods/Target Support Files/Pods-PR/Pods-PR.release.xcconfig"; sourceTree = "<group>"; };
-		5C720427908521F0F1752651 /* Pods-PRTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PRTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PRTests/Pods-PRTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6DF56EAFFBF60C626E510836 /* Pods_BitbucketTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitbucketTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		762A2E4C93F4F2595280F3B7 /* Pods-PRTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PRTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PRTests/Pods-PRTests.release.xcconfig"; sourceTree = "<group>"; };
 		782226D31D7B788A00722DE6 /* SettingsTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTextField.swift; sourceTree = "<group>"; };
 		8D6387F170C9B6C5631D9DF7 /* Pods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9D9A02703307E85110A079E /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
-		BBE1DA25FD16566A10B31BDB /* Pods-PR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PR/Pods-PR.debug.xcconfig"; sourceTree = "<group>"; };
+		BB3DD8BE2ABC41DC56E9FB88 /* Pods-Bitbucket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitbucket.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bitbucket/Pods-Bitbucket.release.xcconfig"; sourceTree = "<group>"; };
 		BED50936BCE87E1CE7D5AF63 /* Pods_Bitbucket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bitbucket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CFD638001AFEAC7157B81FDD /* Pods_PR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F82459A049911EF1C9BA3227 /* Pods_PRTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PRTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +95,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				143C6B351D7AF4E6006CF7EF /* ServiceManagement.framework in Frameworks */,
-				4CDB96A533CA5783AF5E4941 /* Pods_PR.framework in Frameworks */,
+				AB4B3FD723CF274A4953D5FC /* Pods_Bitbucket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,9 +148,9 @@
 		14D616621D73792600801053 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				14D616611D73792600801053 /* PR.app */,
-				14D616701D73792600801053 /* PR.xctest */,
-				14C4D9AA1D7CB3820082F6D1 /* PR Agent.app */,
+				14D616611D73792600801053 /* Bitbucket.app */,
+				14D616701D73792600801053 /* Bitbucket.xctest */,
+				14C4D9AA1D7CB3820082F6D1 /* Bitbucket Agent.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -190,12 +186,10 @@
 		6989B632E2618AE3844E3776 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BBE1DA25FD16566A10B31BDB /* Pods-PR.debug.xcconfig */,
-				4E39B42FD92A8245AF0B2A8C /* Pods-PR.release.xcconfig */,
-				5C720427908521F0F1752651 /* Pods-PRTests.debug.xcconfig */,
-				762A2E4C93F4F2595280F3B7 /* Pods-PRTests.release.xcconfig */,
 				3053DA0DB1B692B4F3C35882 /* Pods-Tests.debug.xcconfig */,
 				B9D9A02703307E85110A079E /* Pods-Tests.release.xcconfig */,
+				1989F9D6F3259DF1A04597FF /* Pods-Bitbucket.debug.xcconfig */,
+				BB3DD8BE2ABC41DC56E9FB88 /* Pods-Bitbucket.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -214,8 +208,6 @@
 				143C6B341D7AF4E6006CF7EF /* ServiceManagement.framework */,
 				BED50936BCE87E1CE7D5AF63 /* Pods_Bitbucket.framework */,
 				6DF56EAFFBF60C626E510836 /* Pods_BitbucketTests.framework */,
-				CFD638001AFEAC7157B81FDD /* Pods_PR.framework */,
-				F82459A049911EF1C9BA3227 /* Pods_PRTests.framework */,
 				8D6387F170C9B6C5631D9DF7 /* Pods_Tests.framework */,
 			);
 			name = Frameworks;
@@ -238,12 +230,12 @@
 			);
 			name = Agent;
 			productName = BitbucketAgent;
-			productReference = 14C4D9AA1D7CB3820082F6D1 /* PR Agent.app */;
+			productReference = 14C4D9AA1D7CB3820082F6D1 /* Bitbucket Agent.app */;
 			productType = "com.apple.product-type.application";
 		};
-		14D616601D73792600801053 /* PR */ = {
+		14D616601D73792600801053 /* Bitbucket */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 14D616791D73792600801053 /* Build configuration list for PBXNativeTarget "PR" */;
+			buildConfigurationList = 14D616791D73792600801053 /* Build configuration list for PBXNativeTarget "Bitbucket" */;
 			buildPhases = (
 				B11E3D7D603F38B58C78B593 /* [CP] Check Pods Manifest.lock */,
 				14D6165D1D73792600801053 /* Sources */,
@@ -257,9 +249,9 @@
 			);
 			dependencies = (
 			);
-			name = PR;
+			name = Bitbucket;
 			productName = Bitbucket;
-			productReference = 14D616611D73792600801053 /* PR.app */;
+			productReference = 14D616611D73792600801053 /* Bitbucket.app */;
 			productType = "com.apple.product-type.application";
 		};
 		14D6166F1D73792600801053 /* Tests */ = {
@@ -280,7 +272,7 @@
 			);
 			name = Tests;
 			productName = BitbucketTests;
-			productReference = 14D616701D73792600801053 /* PR.xctest */;
+			productReference = 14D616701D73792600801053 /* Bitbucket.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -290,7 +282,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Dmytro Morozov";
 				TargetAttributes = {
 					14C4D9A91D7CB3820082F6D1 = {
@@ -323,7 +315,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 14D6165C1D73792600801053 /* Build configuration list for PBXProject "PR" */;
+			buildConfigurationList = 14D6165C1D73792600801053 /* Build configuration list for PBXProject "Bitbucket" */;
 			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -336,7 +328,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				14D616601D73792600801053 /* PR */,
+				14D616601D73792600801053 /* Bitbucket */,
 				14D6166F1D73792600801053 /* Tests */,
 				14C4D9A91D7CB3820082F6D1 /* Agent */,
 			);
@@ -384,7 +376,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PR/Pods-PR-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bitbucket/Pods-Bitbucket-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		35C82B3E39D3F1F6B37949F2 /* [CP] Embed Pods Frameworks */ = {
@@ -414,7 +406,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		DB469F0E8EAE4B99A7B3E1EF /* [CP] Embed Pods Frameworks */ = {
@@ -429,7 +421,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PR/Pods-PR-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bitbucket/Pods-Bitbucket-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E9FA72B164C07EA5A7079BEE /* [CP] Check Pods Manifest.lock */ = {
@@ -444,7 +436,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		EC3A681B8F3EF50C17A4DA29 /* [CP] Copy Pods Resources */ = {
@@ -500,7 +492,7 @@
 /* Begin PBXTargetDependency section */
 		14D616721D73792600801053 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 14D616601D73792600801053 /* PR */;
+			target = 14D616601D73792600801053 /* Bitbucket */;
 			targetProxy = 14D616711D73792600801053 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -534,9 +526,9 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = BitbucketAgent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = mac.toolbox.pr.agent.wip;
-				PRODUCT_NAME = "PR Agent";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mdmsua.bitbucket.agent;
+				PRODUCT_NAME = "Bitbucket Agent";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -551,9 +543,9 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = BitbucketAgent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = mac.toolbox.pr.agent;
-				PRODUCT_NAME = "PR Agent";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mdmsua.bitbucket.agent;
+				PRODUCT_NAME = "Bitbucket Agent";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -598,7 +590,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -640,7 +632,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -650,7 +642,7 @@
 		};
 		14D6167A1D73792600801053 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BBE1DA25FD16566A10B31BDB /* Pods-PR.debug.xcconfig */;
+			baseConfigurationReference = 1989F9D6F3259DF1A04597FF /* Pods-Bitbucket.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -661,10 +653,10 @@
 				DEVELOPMENT_TEAM = 56468X2PU5;
 				INFOPLIST_FILE = Bitbucket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-DDEBUG\"";
-				PRODUCT_BUNDLE_IDENTIFIER = mac.toolbox.pr.wip;
-				PRODUCT_NAME = PR;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mdmsua.Bitbucket;
+				PRODUCT_NAME = Bitbucket;
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
 			};
@@ -672,7 +664,7 @@
 		};
 		14D6167B1D73792600801053 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4E39B42FD92A8245AF0B2A8C /* Pods-PR.release.xcconfig */;
+			baseConfigurationReference = BB3DD8BE2ABC41DC56E9FB88 /* Pods-Bitbucket.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -684,10 +676,10 @@
 				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = Bitbucket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-DRELEASE\"";
-				PRODUCT_BUNDLE_IDENTIFIER = mac.toolbox.pr;
-				PRODUCT_NAME = PR;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mdmsua.Bitbucket;
+				PRODUCT_NAME = Bitbucket;
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
 			};
@@ -703,9 +695,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mdmsua.mactoolbox.pr.tests;
-				PRODUCT_NAME = PR;
+				PRODUCT_NAME = Bitbucket;
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PR.app/Contents/MacOS/PR";
+				TEST_HOST = "$(BUILT_BitbucketODUCTS_DIR)/Bitbucket.app/Contents/MacOS/Bitbucket";
 			};
 			name = Debug;
 		};
@@ -719,9 +711,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mdmsua.mactoolbox.pr.tests;
-				PRODUCT_NAME = PR;
+				PRODUCT_NAME = Bitbucket;
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PR.app/Contents/MacOS/PR";
+				TEST_HOST = "$(BUILT_BitbucketODUCTS_DIR)/Bitbucket.app/Contents/MacOS/Bitbucket";
 			};
 			name = Release;
 		};
@@ -737,7 +729,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		14D6165C1D73792600801053 /* Build configuration list for PBXProject "PR" */ = {
+		14D6165C1D73792600801053 /* Build configuration list for PBXProject "Bitbucket" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				14D616771D73792600801053 /* Debug */,
@@ -746,7 +738,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		14D616791D73792600801053 /* Build configuration list for PBXNativeTarget "PR" */ = {
+		14D616791D73792600801053 /* Build configuration list for PBXNativeTarget "Bitbucket" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				14D6167A1D73792600801053 /* Debug */,

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2327e" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16F54b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <objects>
@@ -13,13 +14,13 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="PR" customModuleProvider="target">
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Bitbucket" customModuleProvider="target">
             <connections>
                 <outlet property="popover" destination="ceB-DZ-hYK" id="qJt-49-337"/>
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
-        <viewController id="J5l-LN-05E" userLabel="Popover View Controller" customClass="PopoverViewController" customModule="PR" customModuleProvider="target">
+        <viewController id="J5l-LN-05E" userLabel="Popover View Controller" customClass="PopoverViewController" customModule="Bitbucket" customModuleProvider="target">
             <connections>
                 <outlet property="check" destination="oac-xq-WpI" id="JHR-yX-nSa"/>
                 <outlet property="copyright" destination="0Og-Kf-IRg" id="GdS-ve-elQ"/>
@@ -50,7 +51,7 @@
                         <rect key="frame" x="10" y="33" width="250" height="254"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1vt-0o-MMr" customClass="SettingsTextField" customModule="PR" customModuleProvider="target">
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1vt-0o-MMr" customClass="SettingsTextField" customModule="Bitbucket" customModuleProvider="target">
                                 <rect key="frame" x="17" y="229" width="216" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" placeholderString="Server" drawsBackground="YES" id="LKb-qn-bYm">
@@ -95,7 +96,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j80-BF-uTY" customClass="SettingsTextField" customModule="PR" customModuleProvider="target">
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j80-BF-uTY" customClass="SettingsTextField" customModule="Bitbucket" customModuleProvider="target">
                                 <rect key="frame" x="17" y="197" width="216" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" placeholderString="Username" drawsBackground="YES" id="dAk-53-z1x">
@@ -137,7 +138,7 @@
                                         </connections>
                                     </button>
                                     <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="EIk-ek-8PQ">
-                                        <rect key="frame" x="58" y="3" width="16" height="16"/>
+                                        <rect key="frame" x="58" y="2.5" width="16" height="16"/>
                                     </progressIndicator>
                                 </subviews>
                                 <visibilityPriorities>
@@ -169,7 +170,7 @@
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Xg-nS-u2p">
                                 <rect key="frame" x="21" y="147" width="208" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="MacToolbox PR" id="IaG-sb-PwT">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Bitbucket" id="IaG-sb-PwT">
                                     <font key="font" size="30" name=".AppleSystemUIFont"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -220,7 +221,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PIY-OD-dd4">
-                                        <rect key="frame" x="55" y="0.0" width="55" height="17"/>
+                                        <rect key="frame" x="55" y="-0.5" width="55" height="17"/>
                                         <buttonCell key="cell" type="inline" title="Icons8" bezelStyle="inline" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="W2X-0w-Dp3">
                                             <behavior key="behavior" lightByContents="YES"/>
                                             <font key="font" metaFont="smallSystemBold"/>
@@ -244,12 +245,12 @@
                 </tabViewItem>
                 <tabViewItem label="Quit" identifier="" id="BoN-m7-mzM">
                     <view key="view" id="7Gm-mc-Ygr">
-                        <rect key="frame" x="10" y="33" width="250" height="296"/>
+                        <rect key="frame" x="10" y="33" width="250" height="254"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BPn-pP-xL3">
-                                <rect key="frame" x="82" y="131" width="86" height="32"/>
-                                <buttonCell key="cell" type="push" title="Quit PR" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hj2-6F-Iow">
+                                <rect key="frame" x="62" y="110" width="127" height="32"/>
+                                <buttonCell key="cell" type="push" title="Quit Bitbucket" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hj2-6F-Iow">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
