@@ -31,12 +31,10 @@ class PopoverViewController: NSViewController {
         let server = serverTextField.stringValue
         let username = usernameTextField.stringValue
         let password = passwordSecureTextField.stringValue
+        let configuration = BitbucketConfiguration(server: server, username: username, password: password)
         saveButton.isHidden = true
         progressIndicator.startAnimation(sender)
-        BitbucketClient(
-            server: server,
-            username: username,
-            password: password).getInboxPullRequestsCount { [weak self] (_, error) in
+        BitbucketClient(with: configuration).getInboxPullRequestsCount { [weak self] (_, error) in
             self?.progressIndicator.stopAnimation(sender)
             self?.saveButton.isHidden = false
             if let error = error {

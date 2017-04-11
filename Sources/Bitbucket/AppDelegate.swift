@@ -11,11 +11,9 @@ import Sentry
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
     @IBOutlet fileprivate weak var popover: NSPopover!
-
     private let dsn = "https://cb5739c5ac9d453284719beb8fe269f7:6cbe5139431e4e8b99bb2e5ed4e7b226@sentry.io/94601"
-
+    private let client = BitbucketClient()
     fileprivate let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
     fileprivate var timer: Timer?
     fileprivate static let fill = NSImage(named: "Fill")
@@ -76,7 +74,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc fileprivate func checkInbox() {
         statusItem.button?.image = AppDelegate.load
         statusItem.button?.imagePosition = .imageOnly
-        BitbucketClient()?.getInboxPullRequestsCount { [weak self] (count, error) in
+        client?.getInboxPullRequestsCount { [weak self] (count, error) in
             if let count = count {
                 self?.updateStatusIcon(count)
             } else if error != nil {

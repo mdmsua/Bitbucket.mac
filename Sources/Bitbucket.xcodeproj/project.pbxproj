@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		141A39A71D74E1AF006B4247 /* SettingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141A39A61D74E1AF006B4247 /* SettingStore.swift */; };
+		14359CE51E9D53F000D17352 /* BitbucketProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14359CE41E9D53F000D17352 /* BitbucketProtocol.swift */; };
+		14359CE71E9D545500D17352 /* BitbucketConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14359CE61E9D545500D17352 /* BitbucketConfiguration.swift */; };
+		14359CEA1E9D585F00D17352 /* InboxPullRequestsCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14359CE91E9D585F00D17352 /* InboxPullRequestsCount.swift */; };
 		143C6B351D7AF4E6006CF7EF /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143C6B341D7AF4E6006CF7EF /* ServiceManagement.framework */; };
 		14C471041D97F6DE00DE721E /* Agent.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 14C4D9AA1D7CB3820082F6D1 /* Agent.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		14C4D9AE1D7CB3820082F6D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C4D9AD1D7CB3820082F6D1 /* AppDelegate.m */; };
@@ -19,7 +22,7 @@
 		14D6166A1D73792600801053 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14D616681D73792600801053 /* MainMenu.xib */; };
 		14D616751D73792600801053 /* SampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D616741D73792600801053 /* SampleTests.swift */; };
 		14D616801D737E6C00801053 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D6167F1D737E6C00801053 /* PopoverViewController.swift */; };
-		14EF24751D74D4DD0033C985 /* BitbucketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EF24741D74D4DD0033C985 /* BitbucketClient.swift */; };
+		14EF24751D74D4DD0033C985 /* BitbucketDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EF24741D74D4DD0033C985 /* BitbucketDelegate.swift */; };
 		14EF24771D74DE2F0033C985 /* CredentialStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EF24761D74DE2F0033C985 /* CredentialStore.swift */; };
 		4BE1206F9482906A4A2EA77B /* Pods_Bitbucket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECE56021F62F27EB268EA95 /* Pods_Bitbucket.framework */; };
 		667D84FB1E9D37FC00CBEE22 /* SettingsTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667D84FA1E9D37FC00CBEE22 /* SettingsTextField.swift */; };
@@ -51,6 +54,9 @@
 
 /* Begin PBXFileReference section */
 		141A39A61D74E1AF006B4247 /* SettingStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingStore.swift; sourceTree = "<group>"; };
+		14359CE41E9D53F000D17352 /* BitbucketProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitbucketProtocol.swift; sourceTree = "<group>"; };
+		14359CE61E9D545500D17352 /* BitbucketConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitbucketConfiguration.swift; sourceTree = "<group>"; };
+		14359CE91E9D585F00D17352 /* InboxPullRequestsCount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InboxPullRequestsCount.swift; path = Models/InboxPullRequestsCount.swift; sourceTree = "<group>"; };
 		143C6B341D7AF4E6006CF7EF /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		14C4D9AA1D7CB3820082F6D1 /* Agent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Agent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14C4D9AC1D7CB3820082F6D1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -61,7 +67,7 @@
 		14C4D9B71D7CB3820082F6D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		14C4D9BB1D7CB3950082F6D1 /* Agent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Agent.entitlements; sourceTree = "<group>"; };
 		14D616611D73792600801053 /* Bitbucket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bitbucket.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		14D616641D73792600801053 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		14D616641D73792600801053 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		14D616661D73792600801053 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14D616691D73792600801053 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		14D6166B1D73792600801053 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -70,7 +76,7 @@
 		14D616761D73792600801053 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14D6167F1D737E6C00801053 /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
 		14D616811D73862000801053 /* Application.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Application.entitlements; sourceTree = "<group>"; };
-		14EF24741D74D4DD0033C985 /* BitbucketClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitbucketClient.swift; sourceTree = "<group>"; };
+		14EF24741D74D4DD0033C985 /* BitbucketDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitbucketDelegate.swift; sourceTree = "<group>"; };
 		14EF24761D74DE2F0033C985 /* CredentialStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialStore.swift; sourceTree = "<group>"; };
 		398212E22C3BB93795D30BA4 /* Pods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		667D84FA1E9D37FC00CBEE22 /* SettingsTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTextField.swift; sourceTree = "<group>"; };
@@ -109,6 +115,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14359CE81E9D583F00D17352 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				14359CE91E9D585F00D17352 /* InboxPullRequestsCount.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		14359CEB1E9D614C00D17352 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				14EF24761D74DE2F0033C985 /* CredentialStore.swift */,
+				141A39A61D74E1AF006B4247 /* SettingStore.swift */,
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
+		14359CEC1E9D61BD00D17352 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				14D616641D73792600801053 /* AppDelegate.swift */,
+				14EF24741D74D4DD0033C985 /* BitbucketDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		14359CED1E9D675400D17352 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				14359CE41E9D53F000D17352 /* BitbucketProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		14359CEE1E9D684C00D17352 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				14D6167F1D737E6C00801053 /* PopoverViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		14359CEF1E9D689100D17352 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				667D84FA1E9D37FC00CBEE22 /* SettingsTextField.swift */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		14359CF01E9D68D100D17352 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				14359CE61E9D545500D17352 /* BitbucketConfiguration.swift */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
 		14C4D9AB1D7CB3820082F6D1 /* Agent */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,16 +220,17 @@
 		14D616631D73792600801053 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				14359CF01E9D68D100D17352 /* Configurations */,
+				14359CEC1E9D61BD00D17352 /* Delegates */,
+				14359CED1E9D675400D17352 /* Protocols */,
+				14359CE81E9D583F00D17352 /* Models */,
+				14359CEB1E9D614C00D17352 /* Stores */,
+				14359CEF1E9D689100D17352 /* Controls */,
+				14359CEE1E9D684C00D17352 /* ViewControllers */,
 				14D616811D73862000801053 /* Application.entitlements */,
-				14D616641D73792600801053 /* AppDelegate.swift */,
 				14D616661D73792600801053 /* Assets.xcassets */,
 				14D616681D73792600801053 /* MainMenu.xib */,
 				14D6166B1D73792600801053 /* Info.plist */,
-				14D6167F1D737E6C00801053 /* PopoverViewController.swift */,
-				14EF24741D74D4DD0033C985 /* BitbucketClient.swift */,
-				667D84FA1E9D37FC00CBEE22 /* SettingsTextField.swift */,
-				14EF24761D74DE2F0033C985 /* CredentialStore.swift */,
-				141A39A61D74E1AF006B4247 /* SettingStore.swift */,
 			);
 			name = Application;
 			path = Bitbucket;
@@ -473,10 +538,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				667D84FB1E9D37FC00CBEE22 /* SettingsTextField.swift in Sources */,
+				14359CE51E9D53F000D17352 /* BitbucketProtocol.swift in Sources */,
+				14359CEA1E9D585F00D17352 /* InboxPullRequestsCount.swift in Sources */,
 				14EF24771D74DE2F0033C985 /* CredentialStore.swift in Sources */,
+				14359CE71E9D545500D17352 /* BitbucketConfiguration.swift in Sources */,
 				141A39A71D74E1AF006B4247 /* SettingStore.swift in Sources */,
 				14D616801D737E6C00801053 /* PopoverViewController.swift in Sources */,
-				14EF24751D74D4DD0033C985 /* BitbucketClient.swift in Sources */,
+				14EF24751D74D4DD0033C985 /* BitbucketDelegate.swift in Sources */,
 				14D616651D73792600801053 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
