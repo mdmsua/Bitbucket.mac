@@ -22,7 +22,7 @@
 		14EF24751D74D4DD0033C985 /* BitbucketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EF24741D74D4DD0033C985 /* BitbucketClient.swift */; };
 		14EF24771D74DE2F0033C985 /* CredentialStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EF24761D74DE2F0033C985 /* CredentialStore.swift */; };
 		4BE1206F9482906A4A2EA77B /* Pods_Bitbucket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECE56021F62F27EB268EA95 /* Pods_Bitbucket.framework */; };
-		782226D41D7B788A00722DE6 /* Bitbucket in Sources */ = {isa = PBXBuildFile; fileRef = 782226D31D7B788A00722DE6 /* Bitbucket */; };
+		667D84FB1E9D37FC00CBEE22 /* SettingsTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667D84FA1E9D37FC00CBEE22 /* SettingsTextField.swift */; };
 		837A9F3A8220A97972D03AF1 /* Pods_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 398212E22C3BB93795D30BA4 /* Pods_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,7 +73,7 @@
 		14EF24741D74D4DD0033C985 /* BitbucketClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitbucketClient.swift; sourceTree = "<group>"; };
 		14EF24761D74DE2F0033C985 /* CredentialStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialStore.swift; sourceTree = "<group>"; };
 		398212E22C3BB93795D30BA4 /* Pods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		782226D31D7B788A00722DE6 /* Bitbucket */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Bitbucket; sourceTree = "<group>"; };
+		667D84FA1E9D37FC00CBEE22 /* SettingsTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTextField.swift; sourceTree = "<group>"; };
 		8B46BD2D045F4818FCC9D6E2 /* Pods-Bitbucket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitbucket.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Bitbucket/Pods-Bitbucket.debug.xcconfig"; sourceTree = "<group>"; };
 		8DB3E5C7B2A9866486F8050E /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		93C94BFCD782021D88E48A20 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -163,7 +163,7 @@
 				14D6166B1D73792600801053 /* Info.plist */,
 				14D6167F1D737E6C00801053 /* PopoverViewController.swift */,
 				14EF24741D74D4DD0033C985 /* BitbucketClient.swift */,
-				782226D21D7B787200722DE6 /* Controls */,
+				667D84FA1E9D37FC00CBEE22 /* SettingsTextField.swift */,
 				14EF24761D74DE2F0033C985 /* CredentialStore.swift */,
 				141A39A61D74E1AF006B4247 /* SettingStore.swift */,
 			);
@@ -189,14 +189,6 @@
 				8DB3E5C7B2A9866486F8050E /* Pods-Tests.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		782226D21D7B787200722DE6 /* Controls */ = {
-			isa = PBXGroup;
-			children = (
-				782226D31D7B788A00722DE6 /* Bitbucket */,
-			);
-			path = Controls;
 			sourceTree = "<group>";
 		};
 		B2D4928FB07DAFF937948F00 /* Frameworks */ = {
@@ -480,7 +472,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				782226D41D7B788A00722DE6 /* Bitbucket in Sources */,
+				667D84FB1E9D37FC00CBEE22 /* SettingsTextField.swift in Sources */,
 				14EF24771D74DE2F0033C985 /* CredentialStore.swift in Sources */,
 				141A39A71D74E1AF006B4247 /* SettingStore.swift in Sources */,
 				14D616801D737E6C00801053 /* PopoverViewController.swift in Sources */,
