@@ -1,2 +1,4 @@
 included:
   - Sources
+excluded:
+  - Pods

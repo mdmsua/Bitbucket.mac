@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		141A39A71D74E1AF006B4247 /* SettingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141A39A61D74E1AF006B4247 /* SettingStore.swift */; };
 		143C6B351D7AF4E6006CF7EF /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143C6B341D7AF4E6006CF7EF /* ServiceManagement.framework */; };
-		14C471041D97F6DE00DE721E /* Bitbucket Agent.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 14C4D9AA1D7CB3820082F6D1 /* Bitbucket Agent.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		14C471041D97F6DE00DE721E /* Agent.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 14C4D9AA1D7CB3820082F6D1 /* Agent.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		14C4D9AE1D7CB3820082F6D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C4D9AD1D7CB3820082F6D1 /* AppDelegate.m */; };
 		14C4D9B11D7CB3820082F6D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C4D9B01D7CB3820082F6D1 /* main.m */; };
 		14C4D9B31D7CB3820082F6D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14C4D9B21D7CB3820082F6D1 /* Assets.xcassets */; };
@@ -43,7 +43,7 @@
 			dstPath = Contents/Library/LoginItems;
 			dstSubfolderSpec = 1;
 			files = (
-				14C471041D97F6DE00DE721E /* Bitbucket Agent.app in CopyFiles */,
+				14C471041D97F6DE00DE721E /* Agent.app in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +52,7 @@
 /* Begin PBXFileReference section */
 		141A39A61D74E1AF006B4247 /* SettingStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingStore.swift; sourceTree = "<group>"; };
 		143C6B341D7AF4E6006CF7EF /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
-		14C4D9AA1D7CB3820082F6D1 /* Bitbucket Agent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bitbucket Agent.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		14C4D9AA1D7CB3820082F6D1 /* Agent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Agent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14C4D9AC1D7CB3820082F6D1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		14C4D9AD1D7CB3820082F6D1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		14C4D9B01D7CB3820082F6D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -148,7 +148,7 @@
 			children = (
 				14D616611D73792600801053 /* Bitbucket.app */,
 				14D616701D73792600801053 /* Bitbucket.xctest */,
-				14C4D9AA1D7CB3820082F6D1 /* Bitbucket Agent.app */,
+				14C4D9AA1D7CB3820082F6D1 /* Agent.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -226,7 +226,7 @@
 			);
 			name = Agent;
 			productName = Agent;
-			productReference = 14C4D9AA1D7CB3820082F6D1 /* Bitbucket Agent.app */;
+			productReference = 14C4D9AA1D7CB3820082F6D1 /* Agent.app */;
 			productType = "com.apple.product-type.application";
 		};
 		14D616601D73792600801053 /* Bitbucket */ = {
@@ -538,7 +538,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mdmsua.bitbucket.agent;
-				PRODUCT_NAME = "Bitbucket Agent";
+				PRODUCT_NAME = Agent;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -555,7 +555,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mdmsua.bitbucket.agent;
-				PRODUCT_NAME = "Bitbucket Agent";
+				PRODUCT_NAME = Agent;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
