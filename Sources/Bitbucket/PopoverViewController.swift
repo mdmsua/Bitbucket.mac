@@ -22,12 +22,10 @@ class PopoverViewController: NSViewController {
     @IBOutlet fileprivate weak var reference: NSTextField!
     @IBOutlet fileprivate weak var progressIndicator: NSProgressIndicator!
     var appDelegate: AppDelegate? {
-        get {
-            return NSApplication.shared().delegate as? AppDelegate
-        }
+        return NSApplication.shared().delegate as? AppDelegate
     }
     @IBAction func onTextFieldPressEnter(_ sender: AnyObject) {
-        self.save(sender);
+        self.save(sender)
     }
     @IBAction func save(_ sender: AnyObject) {
         let server = serverTextField.stringValue
