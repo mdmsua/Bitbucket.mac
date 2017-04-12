@@ -24,6 +24,10 @@
 		14D616801D737E6C00801053 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D6167F1D737E6C00801053 /* PopoverViewController.swift */; };
 		14EF24751D74D4DD0033C985 /* BitbucketDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EF24741D74D4DD0033C985 /* BitbucketDelegate.swift */; };
 		14EF24771D74DE2F0033C985 /* CredentialStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EF24761D74DE2F0033C985 /* CredentialStore.swift */; };
+		14F3CA881E9ED59600660226 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F3CA871E9ED59600660226 /* User.swift */; };
+		14F3CA8A1E9ED84000660226 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F3CA891E9ED84000660226 /* State.swift */; };
+		14F3CA8C1E9ED86500660226 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F3CA8B1E9ED86500660226 /* Author.swift */; };
+		14F3CA8E1E9ED94F00660226 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F3CA8D1E9ED94F00660226 /* Status.swift */; };
 		4BE1206F9482906A4A2EA77B /* Pods_Bitbucket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECE56021F62F27EB268EA95 /* Pods_Bitbucket.framework */; };
 		662A30A71E9E470100B1EBC5 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A30A61E9E470100B1EBC5 /* Page.swift */; };
 		662A30A91E9E4A8A00B1EBC5 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A30A81E9E4A8A00B1EBC5 /* Role.swift */; };
@@ -83,6 +87,10 @@
 		14D616811D73862000801053 /* Application.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Application.entitlements; sourceTree = "<group>"; };
 		14EF24741D74D4DD0033C985 /* BitbucketDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitbucketDelegate.swift; sourceTree = "<group>"; };
 		14EF24761D74DE2F0033C985 /* CredentialStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialStore.swift; sourceTree = "<group>"; };
+		14F3CA871E9ED59600660226 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		14F3CA891E9ED84000660226 /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		14F3CA8B1E9ED86500660226 /* Author.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		14F3CA8D1E9ED94F00660226 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		398212E22C3BB93795D30BA4 /* Pods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		662A30A61E9E470100B1EBC5 /* Page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Page.swift; path = Models/Page.swift; sourceTree = "<group>"; };
 		662A30A81E9E4A8A00B1EBC5 /* Role.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Role.swift; path = Models/Role.swift; sourceTree = "<group>"; };
@@ -131,6 +139,10 @@
 				662A30A61E9E470100B1EBC5 /* Page.swift */,
 				662A30A81E9E4A8A00B1EBC5 /* Role.swift */,
 				662A30AA1E9E4C4400B1EBC5 /* DashboardPullRequest.swift */,
+				14F3CA871E9ED59600660226 /* User.swift */,
+				14F3CA891E9ED84000660226 /* State.swift */,
+				14F3CA8B1E9ED86500660226 /* Author.swift */,
+				14F3CA8D1E9ED94F00660226 /* Status.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -559,15 +571,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14F3CA8C1E9ED86500660226 /* Author.swift in Sources */,
 				667D84FB1E9D37FC00CBEE22 /* SettingsTextField.swift in Sources */,
 				662A30A91E9E4A8A00B1EBC5 /* Role.swift in Sources */,
 				14359CE51E9D53F000D17352 /* BitbucketProtocol.swift in Sources */,
+				14F3CA8E1E9ED94F00660226 /* Status.swift in Sources */,
 				662A30AB1E9E4C4400B1EBC5 /* DashboardPullRequest.swift in Sources */,
 				14359CEA1E9D585F00D17352 /* InboxPullRequestsCount.swift in Sources */,
 				14EF24771D74DE2F0033C985 /* CredentialStore.swift in Sources */,
 				662A30AE1E9E54E000B1EBC5 /* DateTransform.swift in Sources */,
+				14F3CA881E9ED59600660226 /* User.swift in Sources */,
 				662A30A71E9E470100B1EBC5 /* Page.swift in Sources */,
 				14359CE71E9D545500D17352 /* BitbucketConfiguration.swift in Sources */,
+				14F3CA8A1E9ED84000660226 /* State.swift in Sources */,
 				141A39A71D74E1AF006B4247 /* SettingStore.swift in Sources */,
 				14D616801D737E6C00801053 /* PopoverViewController.swift in Sources */,
 				14EF24751D74D4DD0033C985 /* BitbucketDelegate.swift in Sources */,

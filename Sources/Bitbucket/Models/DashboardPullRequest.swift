@@ -17,6 +17,7 @@ class DashboardPullRequest: Mappable {
     private(set) var closed: Bool = false
     private(set) var createdDate: Date = Date()
     private(set) var updatedDate: Date = Date()
+    private(set) var author: Author = Author()
     required init?(map: Map) { }
     func mapping(map: Map) {
         id <- map["id"]
@@ -27,5 +28,6 @@ class DashboardPullRequest: Mappable {
         closed <- map["closed"]
         createdDate <- (map["createdDate"], DateTransform())
         createdDate <- (map["createdDate"], DateTransform())
+        author <- map["author"]
     }
 }
