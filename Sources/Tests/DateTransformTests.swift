@@ -25,7 +25,8 @@ class SampleTests: XCTestCase {
     func testTransformFromJSONWithPositiveInt() {
         let components = DateComponents(year: 2017, month: 1, day: 1, hour: 11, minute: 22, second: 33)
         let expected =  Calendar.current.date(from: components)
-        let actual = transform.transformFromJSON(1483266153000)
+        let input = Int((expected?.timeIntervalSince1970)! * 1000)
+        let actual = transform.transformFromJSON(input)
         XCTAssertEqual(actual, expected)
     }
     func testTransformToJSONWithNil() {
@@ -34,7 +35,7 @@ class SampleTests: XCTestCase {
     func testTransformToJSONWithDate() {
         let components = DateComponents(year: 2017, month: 1, day: 1, hour: 11, minute: 22, second: 33)
         let date = Calendar.current.date(from: components)
-        let expected = 1483266153000
+        let expected = Int((date?.timeIntervalSince1970)! * 1000)
         let actual = transform.transformToJSON(date)
         XCTAssertNotNil(actual)
         XCTAssertEqual(actual, expected)
