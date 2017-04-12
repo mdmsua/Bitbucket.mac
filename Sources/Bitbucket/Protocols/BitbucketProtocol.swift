@@ -8,4 +8,5 @@
 
 protocol BitbucketProtocol {
     func getInboxPullRequestsCount(_ handler: @escaping (_ count: Int?, _ error: Error?) -> Void)
+    func getDashboardPullRequests(_ handler: @escaping (_ page: Page<DashboardPullRequest>?, _ error: Error?) -> Void)
 }

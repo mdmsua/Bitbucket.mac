@@ -41,4 +41,12 @@ class BitbucketClient: BitbucketProtocol {
                 }
         }
     }
+    func getDashboardPullRequests(_ handler: @escaping (_ page: Page<DashboardPullRequest>?, _ error: Error?) -> Void) {
+        Alamofire.request("\(restApi)/dashboard/pull-requests", headers: headers)
+            .responseObject { (response: DataResponse<Page<DashboardPullRequest>>) in
+                if let dashboardPullRequestPage = response.result.value {
+                    handler(dashboardPullRequestPage, nil)
+                }
+        }
+    }
 }
